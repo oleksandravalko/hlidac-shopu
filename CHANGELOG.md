@@ -1,5 +1,8 @@
 # Extension
 
+## 2.1.9
+* Fix extension rendering on Pilulka
+
 ## 2.1.8
 * Added shop.billa.cz
 * Added albert.cz

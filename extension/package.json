@@ -1,6 +1,6 @@
 {
   "name": "@hlidac-shopu/extension",
-  "version": "2.1.8",
+  "version": "2.1.9",
   "description": "Extension",
   "dependencies": {
     "@hlidac-shopu/lib": "workspace:*",
