@@ -7,12 +7,11 @@ export class Pilulka extends AsyncShop {
   }
 
   get waitForSelector() {
-    return ".service-detail__basket-box";
+    return ".body-product-detail";
   }
 
   async scrape() {
-    const data = JSON.parse(document.querySelector("script[type='application/ld+json']").textContent);
-    const product = data.find(x => x["@type"] === "Product");
+    const product = JSON.parse(document.querySelector("script[type='application/ld+json']").textContent);
     const title = product?.name;
     const itemId = document.querySelector("[componentname='catalog.product']").id;
     const currentPrice = product?.offers?.price;
