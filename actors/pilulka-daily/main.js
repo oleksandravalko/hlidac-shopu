@@ -39,7 +39,7 @@ export function buildUrl(domain, link) {
 function blackFridayUrl(country) {
   return [
     {
-      url: buildUrl(rootWebUrl(country), "/black-friday"),
+      url: buildUrl(rootWebUrl(country), (country === Country.CZ ? '/akce-a-slevy' : '/akcie-a-zlavy')),
       label: Labels.CATEGORY
     }
   ];
