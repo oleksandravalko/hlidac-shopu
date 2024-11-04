@@ -211,7 +211,7 @@ async function main() {
         data: { getCampaign: data } = {},
         errors
       } = json;
-      if (errors) log.error("GraphQL errors", errors);
+      if (errors) throw new Error(errors[0].message);
 
       const {
         productCollection: { items = [] } = {},
