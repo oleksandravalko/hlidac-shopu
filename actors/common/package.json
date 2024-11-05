@@ -7,9 +7,11 @@
   "dependencies": {
     "@hlidac-shopu/lib": "1.4.0",
     "@thi.ng/atom": "5.3.11",
-    "apify": "3.2.6",
     "linkedom": "0.18.5",
     "rollbar": "2.26.4"
+  },
+  "peerDependencies": {
+    "apify": "^3.0.0"
   },
   "devDependencies": {
     "@types/node": "22.8.6"
