@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block styles %}
-  <link rel="stylesheet" href="/assets/css/dashboard.css">
+  <link rel="stylesheet" href="{{ "dashboard.css" | assetUrl("stylesheets") }}">
   <style>
     .shops-stats {
       border-spacing: 0 12px;

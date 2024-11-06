@@ -63,7 +63,7 @@
     margin-top: 0.5em;
   }
 
-  &__date {
+  .media__date {
     font-size: 14px;
     line-height: 17px;
     color: var(--mdc-theme-secondary);
@@ -71,13 +71,13 @@
     padding: 0;
   }
 
-  &__description {
+  .media__description {
     font-size: 18px;
     line-height: 28px;
     color: var(--mdc-theme-text-third-on-light);
   }
 
-  &__image {
+  .media__image {
     margin-right: 24px;
   }
 }

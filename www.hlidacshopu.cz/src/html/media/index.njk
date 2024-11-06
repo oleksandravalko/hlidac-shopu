@@ -3,7 +3,7 @@
 {% set bodyClass = "media-page" %}
 
 {% block styles %}
-  <link rel="stylesheet" href="/assets/css/media.css">
+  <link rel="stylesheet" href="{{ "media.css" | assetUrl("stylesheets") }}">
 {% endblock %}
 
 {% macro mediaImage(path) %}

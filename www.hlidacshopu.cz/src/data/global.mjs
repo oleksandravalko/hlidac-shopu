@@ -1,4 +1,4 @@
-{
+export default {
   "en": {
     "code": "en",
     "navigation": {
@@ -8,4 +8,4 @@
       "title": "TopMonks"
     }
   }
-}
+};

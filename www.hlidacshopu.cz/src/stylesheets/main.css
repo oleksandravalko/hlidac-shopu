@@ -1,4 +1,4 @@
-@use "@material/layout-grid/mdc-layout-grid";
+@import "mdc.layout-grid.css";
 
 body.no-scroll {
   overflow: hidden;
@@ -69,7 +69,7 @@ footer {
   }
 }
 
-// TYPOGRAPHY //
+/* TYPOGRAPHY */
 h1 {
   font-size: 44px;
   font-weight: 700;
@@ -206,7 +206,7 @@ p.title--subtitle {
   margin: 0 auto;
 }
 
-// HEADER //
+/* HEADER */
 
 header {
   .menu--horizontal .menu__list {
@@ -340,7 +340,7 @@ footer {
   }
 }
 
-// HAMBURGER //
+/* HAMBURGER */
 
 .app-bar {
   height: 48px;
@@ -509,7 +509,7 @@ footer {
     transform: scale(0) translateX(-100vw);
   }
 
-  &__inner {
+  .modal__inner {
     background: #fff;
     @media screen and (max-width: 479px) {
       position: fixed;
@@ -527,11 +527,11 @@ footer {
     }
   }
 
-  &__placeholder {
+  .modal__placeholder {
     display: flex;
   }
 
-  &__close {
+  .modal__close {
     position: absolute;
     top: 16px;
     right: 16px;

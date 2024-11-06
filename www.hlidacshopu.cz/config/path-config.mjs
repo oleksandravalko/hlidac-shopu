@@ -1,4 +1,4 @@
-{
+export default {
   "src": "./www.hlidacshopu.cz/src",
   "dest": "./public/www.hlidacshopu.cz",
 
@@ -21,14 +21,9 @@
     "dest": "./"
   },
 
-  "esbuild": {
-    "src": "javascripts",
+  "esm": {
+    "src": "esm",
     "dest": "assets/esm"
-  },
-
-  "esbuild-legacy": {
-    "src": "javascripts",
-    "dest": "assets/js"
   },
 
   "stylesheets": {
@@ -50,4 +45,4 @@
     "src": "icons",
     "dest": "assets/img"
   }
-}
+};

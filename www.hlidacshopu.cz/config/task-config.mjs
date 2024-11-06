@@ -1,7 +1,10 @@
+import fs from "node:fs";
+import path from "node:path";
 import projectPath from "@hckr_/blendid/lib/projectPath.mjs";
 import gulp_mode from "gulp-mode";
 import cssvariables from "postcss-css-variables";
-import pathConfig from "./path-config.json" with { type: "json" };
+import pathConfig from "./path-config.mjs";
+import { WorkboxBuildRegistry } from "./workboxbuild.mjs";
 
 /** @typedef {import("@types/nunjucks").Environment} Environment */
 
@@ -12,21 +15,22 @@ const longDateFormatter = new Intl.DateTimeFormat("cs", {
   day: "numeric"
 });
 
+function assetPath(destPath, key) {
+  const revManifest = path.join(destPath, "rev-manifest.json");
+  if (fs.existsSync(revManifest)) {
+    const manifest = JSON.parse(fs.readFileSync(revManifest).toString());
+    return path.join(destPath, manifest[key]);
+  }
+  return path.join(destPath, key);
+}
+
 const config = {
   images: true,
   fonts: true,
   static: true,
-  javascripts: false,
 
   cloudinary: {
     extensions: ["jpg", "jpeg", "png", "gif", "svg", "webp"]
-  },
-
-  workboxBuild: {
-    swSrc: projectPath(pathConfig.src, pathConfig.esbuild.src, "sw.js"),
-    swDest: projectPath(pathConfig.dest, "sw.js"),
-    globDirectory: pathConfig.dest,
-    globPatterns: ["app/index.html", "assets/**/*.{js,css}"]
   },
 
   stylesheets: {
@@ -84,13 +88,6 @@ const config = {
     }
   },
 
-  browserSync: {
-    server: {
-      baseDir: pathConfig.dest
-    },
-    browser: ["google chrome"]
-  },
-
   esbuild: {
     extensions: ["js", "mjs"],
     watch: "../../../lib/**/*.mjs",
@@ -109,10 +106,25 @@ const config = {
     }
   },
 
-  watch: { tasks: ["esbuild"] },
-
   production: {
     rev: true
+  },
+
+  registries: [
+    new WorkboxBuildRegistry(
+      {
+        swSrc: () => assetPath(projectPath(pathConfig.dest), "assets/esm/sw.js"),
+        swDest: projectPath(pathConfig.dest, "assets/esm/sw.js"),
+        globDirectory: pathConfig.dest,
+        globPatterns: ["app/index.html", "assets/**/*.{js,css}"]
+      },
+      pathConfig
+    )
+  ],
+
+  additionalTasks: {
+    development: { postbuild: ["workboxBuild"] },
+    production: { postbuild: ["workboxBuild"] }
   }
 };
 

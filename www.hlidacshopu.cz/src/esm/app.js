@@ -32,7 +32,7 @@ const view = template => state.resetIn(["view"], template);
 const isProduction = () => ["localhost", "127"].indexOf(location.hostname) === -1;
 
 if ("serviceWorker" in navigator && isProduction()) {
-  const wb = new Workbox("/sw.js");
+  const wb = new Workbox("/assets/esm/sw.js", { type: "module", scope: "/" });
 
   const showSkipWaitingPrompt = () => {
     registerUpdateHandler(wb);
