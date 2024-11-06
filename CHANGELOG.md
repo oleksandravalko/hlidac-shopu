@@ -1,5 +1,8 @@
 # Extension
 
+## 2.1.10
+* Fix Alza detail title scrape
+
 ## 2.1.9
 * Fix extension rendering on Pilulka
 
