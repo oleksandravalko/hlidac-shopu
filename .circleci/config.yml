@@ -18,7 +18,7 @@ commands:
       - node/install-yarn
       - node/install-packages:
           pkg-manager: yarn-berry
-          cache-version: v2
+          cache-version: v3
           override-ci-command: yarn install --immutable
   read_deployment_envs:
     parameters:
@@ -115,7 +115,7 @@ jobs:
       - node/install-yarn
       - node/install-packages:
           pkg-manager: yarn-berry
-          cache-version: v1-api
+          cache-version: v2-api
           override-ci-command: yarn workspaces focus hlidac-shopu @hlidac-shopu/lib @hlidac-shopu/api-lambdas
       - run:
           name: Lint API
@@ -138,7 +138,7 @@ jobs:
       - node/install-yarn
       - node/install-packages:
           pkg-manager: yarn-berry
-          cache-version: v1-lib
+          cache-version: v2-lib
           override-ci-command: yarn workspaces focus hlidac-shopu @hlidac-shopu/lib
       - run:
           name: Run tests
@@ -165,7 +165,7 @@ jobs:
       - node/install-yarn
       - node/install-packages:
           pkg-manager: yarn-berry
-          cache-version: v1-web
+          cache-version: v2-web
           override-ci-command: yarn workspaces focus hlidac-shopu @hlidac-shopu/lib @hlidac-shopu/web
       - run:
           name: Lint website
@@ -201,7 +201,7 @@ jobs:
       - node/install-yarn
       - node/install-packages:
           pkg-manager: yarn-berry
-          cache-version: v1-ext
+          cache-version: v2-ext
           override-ci-command: yarn workspaces focus hlidac-shopu @hlidac-shopu/lib @hlidac-shopu/extension
       - run:
           name: Build extension bundle
@@ -265,7 +265,7 @@ jobs:
       - node/install-yarn
       - node/install-packages:
           pkg-manager: yarn-berry
-          cache-version: v1-tools
+          cache-version: v2-tools
           override-ci-command: yarn workspaces focus hlidac-shopu
       - run:
           name: Publish extension
@@ -302,7 +302,7 @@ jobs:
       - node/install-yarn
       - node/install-packages:
           pkg-manager: yarn-berry
-          cache-version: v1-infra
+          cache-version: v2-infra
           override-ci-command: yarn workspaces focus @hlidac-shopu/infrastructure @hlidac-shopu/api-lambdas
       - run:
           working_directory: infrastructure
@@ -328,7 +328,7 @@ jobs:
       - node/install-yarn
       - node/install-packages:
           pkg-manager: yarn-berry
-          cache-version: v1-infra
+          cache-version: v2-infra
           override-ci-command: yarn workspaces focus @hlidac-shopu/infrastructure @hlidac-shopu/api-lambdas
       - run:
           working_directory: infrastructure
