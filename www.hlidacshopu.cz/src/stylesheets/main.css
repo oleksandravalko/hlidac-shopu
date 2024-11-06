@@ -1,4 +1,4 @@
-@import "mdc.layout-grid.css";
+@import "./mdc.layout-grid.css";
 
 body.no-scroll {
   overflow: hidden;

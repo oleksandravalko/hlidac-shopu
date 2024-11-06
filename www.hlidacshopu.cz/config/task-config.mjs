@@ -3,6 +3,7 @@ import path from "node:path";
 import projectPath from "@hckr_/blendid/lib/projectPath.mjs";
 import gulp_mode from "gulp-mode";
 import cssvariables from "postcss-css-variables";
+import atImport from "postcss-import";
 import pathConfig from "./path-config.mjs";
 import { WorkboxBuildRegistry } from "./workboxbuild.mjs";
 
@@ -35,7 +36,7 @@ const config = {
 
   stylesheets: {
     postcss: {
-      plugins: [cssvariables({ preserve: true })]
+      plugins: [atImport(), cssvariables({ preserve: true })]
     }
   },
 

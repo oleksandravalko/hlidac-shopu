@@ -19,6 +19,7 @@
     "@hckr_/blendid": "8.7.1",
     "dotenv-cli": "7.4.2",
     "postcss-css-variables": "0.19.0",
+    "postcss-import": "^16.1.0",
     "prettier": "3.3.3",
     "undertaker-registry": "^2.0.0",
     "workbox-build": "^7.3.0"

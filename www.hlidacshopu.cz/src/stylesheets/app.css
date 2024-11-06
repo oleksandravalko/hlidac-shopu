@@ -1,7 +1,7 @@
-@import "mdc.top-app-bar.css";
-@import "mdc.icon-button.css";
-@import "mdc.snackbar.css";
-@import "mdc.button.css";
+@import "./mdc.top-app-bar.css";
+@import "./mdc.icon-button.css";
+@import "./mdc.snackbar.css";
+@import "./mdc.button.css";
 
 .ios-share-action {
   header,
