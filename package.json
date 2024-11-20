@@ -21,7 +21,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
-    "@hckr_/blendid": "9.0.0-beta.18",
+    "@hckr_/blendid": "9.0.0-beta.19",
     "@types/firefox-webext-browser": "120.0.4",
     "@types/node": "22.9.0",
     "@types/nunjucks": "3.2.6",
@@ -41,8 +41,6 @@
     "puppeteer": "23.8.0",
     "rollbar": "2.26.4",
     "source-map-explorer": "2.5.3",
-    "stylelint": "16.10.0",
-    "stylelint-config-prettier": "9.0.5",
     "web-ext": "8.3.0",
     "web-ext-submit": "7.8.0"
   },
