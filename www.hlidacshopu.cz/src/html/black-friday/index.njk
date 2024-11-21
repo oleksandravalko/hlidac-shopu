@@ -1,11 +1,8 @@
 {% extends 'layouts/master.njk' %}
 {% from 'macros/helpers.njk' import sprite %}
+{% set lastBFYear = blackFriday.currentYear %}
+
 {% block title %}Přehled Black Fridays na Hlídači shopů{% endblock %}
-
-{% set lastBFYear = 2023 %}
-
-{% block preload %}
-{% endblock %}
 
 {% block styles %}
   <style>

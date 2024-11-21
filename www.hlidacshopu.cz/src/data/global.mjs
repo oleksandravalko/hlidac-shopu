@@ -1,4 +1,7 @@
 export default {
+  blackFriday: {
+    currentYear: 2024
+  },
   "en": {
     "code": "en",
     "navigation": {
