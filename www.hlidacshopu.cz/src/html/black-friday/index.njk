@@ -77,11 +77,26 @@
       text-decoration: underline;
       color: var(--mdc-theme-secondary-dark);
     }
-  </style>
-  <link rel="stylesheet" href="{{ "reviews.css" | assetUrl("stylesheets") }}">
-  <style>
+
     .review__rating {
-      padding-right: 0;
+      display: grid;
+
+      &::before,
+      .review__rating-value {
+        background: url({{ "stars.svg" | assetUrl("images") }}) top left no-repeat;
+        height: 19px;
+        z-index: 4;
+        grid-area: 1 / 1;
+      }
+
+      &::before {
+        content: "";
+        filter: saturate(0);
+        z-index: 2;
+      }
+    }
+    .review__rating--no-rating::before {
+      content: none;
     }
   </style>
 {% endblock %}
@@ -164,6 +179,7 @@
     </div>
   </section>
 {% endblock %}
+
 {% block scripts %}
   <script type="module">
     import { main } from "/assets/esm/dashboard.js";
