@@ -1,14 +1,10 @@
 encryptionsalt: v1:QiUd4qNAqng=:v1:tCt5J/nnMKCFE8a0:YRjy4AlM+iMG9p2i6p+INBIec3K14Q==
 config:
   aws:region: eu-central-1
-  hlidacshopu:screenshotter-host:
-    secure: v1:iXpR/kcnoIBWraUv:XR8WLNcN80Bwipg89FFXfVBUxrLQ96HeanfZ64YFupoiaOFDe2RKumO6535B8jHDe2zg/A==
-  hlidacshopu:screenshotter-token:
-    secure: v1:ybTev0xd+QNaEjXX:oan26gwsm19BmBZEh3XIDAwehETuZSOAiPVGLwJCECtWNthO4se9soY=
   hlidacshopu:data_bucket: data.hlidacshopu.cz
   topmonks_website:assets_paths:
     - /assets/*
-  hlidac-shopu:screenshotter-host:
+  hlidacshopu:screenshotter-host:
     secure: v1:BUEzHocQNQ+yrMs9:+OyxY3zyGgPAKuTN7ld8SungHskgb9ZnxAvReGhyEvObIHQ5cbQGl865anehoYuoMtsalwCFj/AUb8+CHH8=
-  hlidac-shopu:screenshotter-token:
+  hlidacshopu:screenshotter-token:
     secure: v1:N56cqYR1xY7feTvn:nT3oBnJwd23SyZj5ZE69Or0X6evbFYYTTsN6jACeIiIxbPP6ENRqIfGrP8lvxSetc768Obxj6d7n6iMJ9CPSx/Le
