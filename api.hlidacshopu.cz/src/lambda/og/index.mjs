@@ -13,14 +13,12 @@ export async function handler(event) {
   if (!params?.url) {
     return withCORS(["GET", "OPTIONS"])({
       statusCode: 400,
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ error: "Missing url parameter" })
     });
   }
 
   const url = new URLSearchParams({ url: params.url });
-  const abort = new AbortController();
-  setTimeout(() => abort.abort(), 30000);
-
   const request = new URLSearchParams({
     "token": process.env.TOKEN ?? "",
     "url": `https://www.hlidacshopu.cz/widget/?${url}`,
@@ -31,9 +29,8 @@ export async function handler(event) {
     "dpr": "2"
   });
 
-  // TODO: switch to Cloudflare {@link https://blog.cloudflare.com/introducing-workers-browser-rendering-api/}
   const resp = await fetch(`${process.env.HOST}/?${request}`, {
-    signal: abort.signal
+    signal: AbortSignal.timeout(30000)
   });
   if (!resp.ok) {
     console.error(resp.statusText, await resp.text());
@@ -47,7 +44,7 @@ export async function handler(event) {
     statusCode: 200,
     headers: {
       "Content-Type": "image/png",
-      "Cache-Control": "maxage=3600"
+      "Cache-Control": "public, max-age=3600"
     },
     isBase64Encoded: true,
     body: buffer.toString("base64")
