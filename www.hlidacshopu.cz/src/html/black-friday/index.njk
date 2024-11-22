@@ -80,20 +80,18 @@
 
     .review__rating {
       display: grid;
-
-      &::before,
-      .review__rating-value {
-        background: url({{ "stars.svg" | assetUrl("images") }}) top left no-repeat;
-        height: 19px;
-        z-index: 4;
-        grid-area: 1 / 1;
-      }
-
-      &::before {
-        content: "";
-        filter: saturate(0);
-        z-index: 2;
-      }
+    }
+    .review__rating::before,
+    .review__rating-value {
+      background: url({{ "stars.svg" | assetUrl("images") }}) top left no-repeat;
+      height: 19px;
+      z-index: 4;
+      grid-area: 1 / 1;
+    }
+    .review__rating::before {
+      content: "";
+      filter: saturate(0);
+      z-index: 2;
     }
     .review__rating--no-rating::before {
       content: none;
