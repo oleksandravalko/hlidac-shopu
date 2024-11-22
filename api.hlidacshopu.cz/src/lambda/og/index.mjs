@@ -1,4 +1,7 @@
+import Rollbar from "../../rollbar.mjs";
 import { withCORS } from "../http.mjs";
+
+const rollbar = Rollbar.init({ lambdaName: "og" });
 
 /** @typedef { import("@pulumi/awsx/apigateway").Request } APIGatewayProxyEvent */
 /** @typedef { import("@pulumi/awsx/apigateway").Response } APIGatewayProxyResult */
@@ -8,7 +11,7 @@ import { withCORS } from "../http.mjs";
  * @param {APIGatewayProxyEvent} event
  * @returns {Promise.<APIGatewayProxyResult>}
  */
-export async function handler(event) {
+export async function handleRequest(event) {
   const params = event.queryStringParameters;
   if (!params?.url) {
     return withCORS(["GET", "OPTIONS"])({
@@ -29,11 +32,11 @@ export async function handler(event) {
     "dpr": "2"
   });
 
-  const resp = await fetch(`${process.env.HOST}/?${request}`, {
+  const resp = await fetch(`${process.env.HOST}?${request}`, {
     signal: AbortSignal.timeout(30000)
   });
   if (!resp.ok) {
-    console.error(resp.statusText, await resp.text());
+    rollbar.error(resp.statusText, await resp.text());
     return withCORS(["GET", "OPTIONS"])({
       statusCode: resp.status,
       body: resp.statusText
@@ -50,3 +53,5 @@ export async function handler(event) {
     body: buffer.toString("base64")
   });
 }
+
+export const handler = rollbar.lambdaHandler(handleRequest);
