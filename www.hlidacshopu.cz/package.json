@@ -16,8 +16,8 @@
     "workbox-window": "7.3.0"
   },
   "devDependencies": {
-    "@hckr_/blendid": "8.7.1",
-    "dotenv-cli": "7.4.2",
+    "@hckr_/blendid": "9.0.0-beta.19",
+    "dotenv-cli": "7.4.4",
     "postcss-css-variables": "0.19.0",
     "undertaker-registry": "^2.0.0",
     "workbox-build": "^7.3.0"
