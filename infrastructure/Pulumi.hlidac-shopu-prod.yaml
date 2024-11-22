@@ -9,6 +9,6 @@ config:
   topmonks_website:assets_paths:
     - /assets/*
   hlidac-shopu:screenshotter-host:
-    secure: v1:Z++VTw7xFN07E74K:Dz1072o4bG3GblpXa1PY2C2hi2LvrhK65l+g7UrdF+r0Rbge/kLAsK5wrWATSfHPypZTHqkI/TFtF35WXw==
+    secure: v1:BUEzHocQNQ+yrMs9:+OyxY3zyGgPAKuTN7ld8SungHskgb9ZnxAvReGhyEvObIHQ5cbQGl865anehoYuoMtsalwCFj/AUb8+CHH8=
   hlidac-shopu:screenshotter-token:
-    secure: v1:yEeeYA2ihEGW1x5g:sMMg9yTb1XX7Z/rIsLZttc56o697kg9/iNAik3IlDIhf+Zv95bKsEhPugYFmpQL8HSMZpw/hG2ICs4UCFp3TmEF7
+    secure: v1:N56cqYR1xY7feTvn:nT3oBnJwd23SyZj5ZE69Or0X6evbFYYTTsN6jACeIiIxbPP6ENRqIfGrP8lvxSetc768Obxj6d7n6iMJ9CPSx/Le
