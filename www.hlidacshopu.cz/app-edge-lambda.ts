@@ -42,7 +42,7 @@ export class AppEdgeLambda extends pulumi.ComponentResource {
         role: role.arn,
         timeout: 5,
         handler: "index.handler",
-        runtime: "nodejs20.x",
+        runtime: aws.lambda.Runtime.NodeJS20dX,
         code: buildAssets("index.mjs")
       },
       { provider: awsUsEast1 }
