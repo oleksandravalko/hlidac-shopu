@@ -42,7 +42,7 @@ export async function handleRequest(event) {
       body: resp.statusText
     });
   }
-  const buffer = await resp.buffer();
+  const buffer = await resp.arrayBuffer();
   return withCORS(["GET", "OPTIONS"])({
     statusCode: 200,
     headers: {
@@ -50,7 +50,7 @@ export async function handleRequest(event) {
       "Cache-Control": "public, max-age=3600"
     },
     isBase64Encoded: true,
-    body: buffer.toString("base64")
+    body: Buffer.from(buffer).toString("base64")
   });
 }
 
