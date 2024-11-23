@@ -36,7 +36,7 @@ async function createRedirectResponse(url) {
  */
 export async function handler(event) {
   const request = event.Records[0].cf.request;
-  const ua = request.headers["user-agent"][0].value;
+  const ua = request.headers["user-agent"]?.[0]?.value;
   const qs = new URLSearchParams(request.querystring);
   const url = qs.get("url");
   if (isSocialMediaBot(ua) && request.uri === "/" && url) {

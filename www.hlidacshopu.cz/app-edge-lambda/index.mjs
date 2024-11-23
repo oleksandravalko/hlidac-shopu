@@ -12,10 +12,10 @@ const content = ({ url, name, imageUrl }) => `<\!DOCTYPE html>
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
 <meta charset="utf-8">
 <title>${name}</title>
-<meta property="og:type" content="og:website" />
-<meta property="og:title" content="${name}" />
-<meta property="og:url" content="${url}" />
-<meta name="twitter:image" property="og:image" content="${imageUrl}" />
+<meta property="og:type" content="og:website">
+<meta property="og:title" content="${name}">
+<meta property="og:url" content="${url}">
+<meta name="twitter:image" property="og:image" content="${imageUrl}">
 <meta name="twitter:description" property="og:description" content="Podívejte se na vývoj ceny a reálnost slevy.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@hlidacshopucz">
@@ -85,7 +85,7 @@ async function createMetadataResponse(url) {
  */
 export async function handler(event) {
   const { request } = event.Records[0].cf;
-  const ua = request.headers["user-agent"][0].value;
+  const ua = request.headers["user-agent"]?.[0]?.value;
   if (isSocialMediaBot(ua)) {
     const qs = new URLSearchParams(request.querystring);
     const url = qs.get("url");
