@@ -234,6 +234,8 @@ export function createApi(domainName: string, options?: any) {
         httpMethod: "GET",
         path: "/og",
         fileName: "og/index.mjs",
+        requiredParameters: [{ in: "query", name: "url" }],
+        cache: { ttl: 3600 },
         timeout: 60,
         environment: {
           variables: {
