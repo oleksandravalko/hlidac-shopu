@@ -56,28 +56,6 @@
       border-bottom-right-radius: 6px;
     }
 
-    .dashboard ul {
-      margin: 0;
-      list-style-type: none;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .dashboard li a {
-      padding: 0 1em;
-    }
-
-    .hs-year-selector :is(a:link, a:visited) {
-      text-decoration: none;
-      color: var(--mdc-theme-text-primary-on-light);
-    }
-
-    .hs-year-selector a:hover {
-      text-decoration: underline;
-      color: var(--mdc-theme-secondary-dark);
-    }
-
     .review__rating {
       display: grid;
     }
@@ -108,9 +86,9 @@
             <h2>Black Friday v číslech</h2>
           </div>
           <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-            <ul class="hs-year-selector">
+            <ul class="hs-year-selector" role="tablist" aria-label="Výběr ročníku">
               {% for year in range(lastBFYear, 2018, -1) %}
-                <li><a href="?rok={{ year }}">{{ year }}</a></li>
+                <li><a href="?rok={{ year }}" role="tab">{{ year }}</a></li>
               {% endfor %}
             </ul>
             <script type="module">
@@ -120,6 +98,7 @@
                 if (el.textContent != year) continue;
                 const newEl = document.createElement("strong");
                 newEl.textContent = year;
+                newEl.ariaSelected = "true";
                 el.insertAdjacentElement("afterend", newEl);
                 el.remove();
               }

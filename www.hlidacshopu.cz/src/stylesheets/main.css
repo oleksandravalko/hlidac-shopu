@@ -586,3 +586,25 @@ footer {
   }
 }
 
+.hs-year-selector {
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2em;
+
+  @media screen and (max-width: 480px) {
+    gap: 1em;
+  }
+
+  a:any-link {
+    text-decoration: none;
+    color: var(--mdc-theme-text-primary-on-light);
+  }
+
+  a:hover {
+    text-decoration: underline;
+    color: var(--mdc-theme-secondary-dark);
+  }
+}
