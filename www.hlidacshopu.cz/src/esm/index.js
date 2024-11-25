@@ -73,9 +73,10 @@ addEventListener("DOMContentLoaded", async e => {
     const client = await import(installationGuideUrl);
     render(client.installationGuide(), installationGuide);
   }
-  const shopsCount = Array.form(shops.keys()).filter(x => x.endsWith(".cz")).length;
+  const shopsCount = Array.from(shops.keys()).filter(x => x.endsWith(".cz")).length;
   eShopsCount.innerText = shopsCount.toLocaleString("cs");
   const stats = await fetchStats();
+  console.log(stats);
   installsCount.innerText = `${countInstalls(stats).toLocaleString("cs")}+`;
   installsCount.setAttribute("title", "Chrome udává jen přibližné statistiky");
   reviewsCount.innerText = countReviews(stats).toLocaleString("cs");
