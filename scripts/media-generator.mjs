@@ -7,11 +7,7 @@ import { parseHTML } from "linkedom/cached";
 
 const test = false;
 const urls = [
-  "https://www.lupa.cz/aktuality/e-shopy-black-friday/",
-  "https://cc.cz/pochybne-slevy-e-shopu-sleduje-sest-let-letos-behem-black-friday-dopadly-nejhur-kaufland-a-pilulka/",
-  "https://zpravy.aktualne.cz/finance/nakupovani/analyza-prumerna-realna-sleva-na-black-friday-je-letos-v-e-s/r~c66a3eba8d3a11eea873ac1f6b220ee8/",
-  "https://www.penize.cz/slevy/448839-kdo-pocita-slevy-ferove-a-kdo-ne-black-friday-poprve-s-novymi-pravidly",
-  "https://feedit.cz/2023/11/27/hlidac-shopu-ani-letosni-black-friday-se-neobeslo-bez-potizi-a-v-mezich-noveho-zakona/"
+  "https://www.zive.cz/clanky/rozjizdi-se-hlidac-supermarketu-odhali-manipulace-s-cenami-a-rekne-vam-kde-koupite-levnejsi-hermelin/sc-3-a-226016/default.aspx"
 ];
 
 const template = ({ url, title, date, perex, filename }) => `---
