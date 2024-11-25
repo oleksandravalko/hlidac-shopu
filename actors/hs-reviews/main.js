@@ -1,12 +1,11 @@
-import { URLSearchParams } from "url";
-import { promisify } from "util";
-import zlib from "zlib";
+import { promisify } from "node:util";
+import zlib from "node:zlib";
 import { CloudFrontClient, CreateInvalidationCommand } from "@aws-sdk/client-cloudfront";
 import { PutObjectCommand, S3Client } from "@aws-sdk/client-s3";
 import { HttpCrawler } from "@crawlee/http";
 import { parseHTML } from "@hlidac-shopu/actors-common/dom.js";
 import rollbar from "@hlidac-shopu/actors-common/rollbar.js";
-import { Actor, Dataset, KeyValueStore, log } from "apify";
+import { Actor, Dataset, log } from "apify";
 import * as csv from "csv-parse/sync";
 import jwt from "jsonwebtoken";
 
@@ -41,8 +40,6 @@ function appleStats(document) {
   ];
 }
 
-const pad = x => `00${x}`.slice(-2);
-
 /**
  * @param {Request} request
  * @param {Response} resp
@@ -61,7 +58,7 @@ async function appleDownloads(request, resp, requestQueue) {
     });
   } else if (month < thisMonth) {
     await requestQueue.addRequest({
-      url: appleDownloadsUrl(`${thisYear}-${pad(month + 1)}`, "MONTHLY"),
+      url: appleDownloadsUrl(`${thisYear}-${(month + 1).toString().padStart(2, "0")}`, "MONTHLY"),
       userData: { ...request.userData, thisYear, month: month + 1 }
     });
   }
@@ -134,14 +131,12 @@ function appleReviews(document) {
 }
 
 /**
- * @param {Document} document
+ * @param {String} html
  * @returns {InteractionCounter[]}
  */
-function googleStats(document) {
-  const downloads = parseInt(
-    document.querySelector(".left-panel > div:nth-of-type(3) > a").textContent.replace(",", "")
-  );
-  const reviews = parseInt(document.querySelector(".left-panel > div:nth-of-type(4)").textContent.match(/\d+/g).at(-1));
+function googleStats(html) {
+  const downloads = parseInt(/(?:userCount:)(?<count>\d+)/gm.exec(html).groups.count);
+  const reviews = parseInt(/\"ratingCount\":(?<count>\d+)/gm.exec(html).groups.count);
   return [
     {
       "@context": "https://schema.org",
@@ -415,8 +410,8 @@ function createRequestHandler(token) {
       }
       case GOOGLE: {
         const response = await fetch(request.url);
-        const { document } = parseHTML(await response.text());
-        const result = googleStats(document);
+        const html = await response.text();
+        const result = googleStats(html);
         await Dataset.pushData(result);
         stats.push(...result);
         break;
