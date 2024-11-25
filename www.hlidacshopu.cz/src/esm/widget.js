@@ -18,19 +18,18 @@ addEventListener("DOMContentLoaded", async () => {
 });
 
 function getTargetURL(searchParams) {
-  const targetURL = searchParams.get("url") || searchParams.get("text");
-  return targetURL && targetURL.trim().split(" ").pop();
+  const targetURL = searchParams.get("url") ?? searchParams.get("text");
+  return targetURL?.trim()?.split(" ")?.at(-1);
 }
 
 function getShop(targetURL) {
   if (!targetURL) return null;
   const shop = targetURL.split(".");
-  shop.pop();
-  return shop.pop();
+  return shop.at(-2);
 }
 
 function getSharedInfo(location) {
-  const { searchParams } = new URL(location);
+  const searchParams = new URLSearchParams(location.search);
   const targetURL = getTargetURL(searchParams);
   const title = searchParams.get("title");
   const shop = getShop(targetURL);
