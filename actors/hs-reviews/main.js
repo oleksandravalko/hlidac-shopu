@@ -135,7 +135,7 @@ function appleReviews(document) {
  * @returns {InteractionCounter[]}
  */
 function googleStats(html) {
-  console.log(/(?:userCount:)(?<count>\d+)/gm.exec(html));
+  console.log(html);
   const downloads = parseInt(/(?:userCount:)(?<count>\d+)/gm.exec(html).groups.count);
   const reviews = parseInt(/\"ratingCount\":(?<count>\d+)/gm.exec(html).groups.count);
   return [
