@@ -5,21 +5,23 @@
 
 .media {
   .media-item:target {
-    padding-top: 140px;
+    padding-block-start: 6em;
   }
 
   h2.media-heading {
-    font-size: 22px;
+    font-size: 1.375em;
     font-weight: bold;
     text-align: left;
     border-bottom: 1px solid var(--mdc-theme-text-third-on-light);
-    top: 2.5em;
+    top: 2em;
+    margin-block-start: 0;
+    padding-block-start: 2em;
     position: sticky;
     background-color: #fff;
   }
 
   article {
-    margin-bottom: 15px;
+    margin-block-end: 2em;
     display: flex;
     @media screen and (max-width: 479px) {
       flex-flow: column;
@@ -27,15 +29,14 @@
   }
 
   h3 {
-    margin: 0 0 10px;
+    margin-block: 0 0.25em;
     padding: 0;
-    font-size: 24px;
-    line-height: 29px;
+    font-size: 1.5em;
+    line-height: 1.208;
     text-wrap: balance;
   }
 
-  a:link,
-  a:visited {
+  a:any-link {
     text-decoration: none;
     color: var(--mdc-theme-text-primary-on-light);
   }
@@ -50,26 +51,26 @@
   }
 
   p {
-    font-size: 16px;
+    font-size: 1em;
     line-height: 1.5;
-    margin-top: 0.5em;
+    margin-block-start: 0.5em;
     text-wrap: pretty;
   }
 
   .media__date {
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 0.875em;
+    line-height: 1.214;
     color: var(--mdc-theme-secondary);
     margin: 12px 0;
     padding: 0;
   }
 
   .media__description {
-    font-size: 18px;
-    line-height: 28px;
+    font-size: 1.125em;
+    line-height: 1.556;
   }
 
   .media__image {
-    margin-right: 24px;
+    margin-inline-end: 1.5em;
   }
 }

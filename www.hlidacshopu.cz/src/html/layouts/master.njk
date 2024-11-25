@@ -118,6 +118,13 @@
       --mdc-layout-grid-column-width-desktop: 60px;
     }
 
+    html {
+      font-size: 100%;
+      color-scheme: light;
+      interpolate-size: allow-keywords;
+      accent-color: var(--mdc-theme-secondary);
+    }
+
     body {
       font-family: "IBM Plex Sans Var", "SF Pro", sans-serif;
       font-family: var(--hs-font-family);
@@ -132,12 +139,6 @@
       text-rendering: geometricPrecision;
       margin: 0;
       padding: 0;
-    }
-    @media only screen and (-webkit-max-device-pixel-ratio: 1.5),
-      only screen and (max-resolution: 96dpi) {
-      body {
-        font-family: Verdana, Arial, sans-serif;
-      }
     }
   </style>
   <link rel="stylesheet" href="{{ "main.css" | assetUrl("stylesheets") }}">
