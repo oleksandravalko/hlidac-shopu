@@ -131,48 +131,6 @@ function appleReviews(document) {
 }
 
 /**
- * @param {String} html
- * @returns {InteractionCounter[]}
- */
-function googleStats(html) {
-  console.log(html);
-  const downloads = parseInt(/(?:userCount:)(?<count>\d+)/gm.exec(html).groups.count);
-  const reviews = parseInt(/\"ratingCount\":(?<count>\d+)/gm.exec(html).groups.count);
-  return [
-    {
-      "@context": "https://schema.org",
-      "@type": "InteractionCounter",
-      "interactionType": "https:/schema.org/InstallAction",
-      "interactionService": {
-        "@type": "WebSite",
-        "name": "Chrome Web Store",
-        "url": "https://chrome.google.com/webstore/detail/hl%C3%ADda%C4%8D-shop%C5%AF/plmlonggbfebcjelncogcnclagkmkikk"
-      },
-      "userInteractionCount": downloads,
-      "subjectOf": {
-        "@type": "WebApplication",
-        "url": "https://www.hlidacshopu.cz/"
-      }
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "InteractionCounter",
-      "interactionType": "https:/schema.org/ReviewAction",
-      "interactionService": {
-        "@type": "WebSite",
-        "name": "Chrome Web Store",
-        "url": "https://chrome.google.com/webstore/detail/hl%C3%ADda%C4%8D-shop%C5%AF/plmlonggbfebcjelncogcnclagkmkikk"
-      },
-      "userInteractionCount": reviews,
-      "subjectOf": {
-        "@type": "WebApplication",
-        "url": "https://www.hlidacshopu.cz/"
-      }
-    }
-  ];
-}
-
-/**
  * @param {Element} review
  * @returns {UserReview}
  */
@@ -362,7 +320,7 @@ const requests = new Map([
   [APPLE, "https://apps.apple.com/cz/app/hl%C3%ADda%C4%8D-shop%C5%AF/id1488295734?l=cs"],
   [APPLE_REVIEWS, "https://apps.apple.com/cz/app/hl%C3%ADda%C4%8D-shop%C5%AF/id1488295734?l=cs"],
   [APPLE_DOWNLOADS, appleDownloadsUrl(2019)],
-  [GOOGLE, "https://chrome-stats.com/d/plmlonggbfebcjelncogcnclagkmkikk"],
+  [GOOGLE, "https://hlidacshopu-google-stats.rarous.workers.dev/"],
   [GOOGLE_REVIEWS, "https://chrome-stats.com/d/plmlonggbfebcjelncogcnclagkmkikk/reviews"],
   [FIREFOX, "https://addons.mozilla.org/en-US/firefox/addon/hl%C3%ADda%C4%8D-shop%C5%AF/"],
   [FIREFOX_REVIEWS, "https://addons.mozilla.org/api/v4/ratings/rating/?addon=1013407"]
@@ -411,8 +369,7 @@ function createRequestHandler(token) {
       }
       case GOOGLE: {
         const response = await fetch(request.url);
-        const html = await response.text();
-        const result = googleStats(html);
+        const result = await response.json();
         await Dataset.pushData(result);
         stats.push(...result);
         break;

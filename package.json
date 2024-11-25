@@ -86,6 +86,7 @@
     "extension",
     "infrastructure",
     "lib",
+    "workers/*",
     "api.hlidacshopu.cz",
     "www.hlidacshopu.cz/app-edge-lambda",
     "www.hlidacshopu.cz/root-edge-lambda",
