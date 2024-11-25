@@ -7,7 +7,13 @@ import { parseHTML } from "linkedom/cached";
 
 const test = false;
 const urls = [
-  "https://www.zive.cz/clanky/rozjizdi-se-hlidac-supermarketu-odhali-manipulace-s-cenami-a-rekne-vam-kde-koupite-levnejsi-hermelin/sc-3-a-226016/default.aspx"
+  "https://www.idnes.cz/ekonomika/domaci/black-friday-e-shop-sleva-darek-vanoce-obchodnik.A241124_180215_ekonomika_vals",
+  "https://www.penize.cz/nakupy/463802-black-friday-je-tady-expertka-radi-jak-v-zaplave-slev-nenaletet",
+  "https://forbes.cz/zradny-black-friday-jake-jsou-nove-triky-prodejcu-a-pro-koho-akce-idealni-neni/",
+  "https://www.e15.cz/videoporady/flow/pozor-na-temu-a-dalsi-trziste-na-black-friday-nedodrzuji-pravidla-a-klamou-zakazniky-varuje-analyticka-gelnerova-1419994",
+  "https://www.echo24.cz/a/HuUwQ/inzerce-slevy-v-obchodech-skutecne",
+  "https://www.zive.cz/clanky/black-friday-slevy-jen-pro-oko-podle-hlidace-shopu-nejhur-dopadl-kaufland/sc-3-a-225771/default.aspx",
+  "https://www.mediaguru.cz/clanky/2023/12/prehled-udalosti-v-marketingu-v-roce-2023/"
 ];
 
 const template = ({ url, title, date, perex, filename }) => `---
