@@ -25,9 +25,11 @@
       </a>
     </div>
     <div class="media__body">
-      <h3><a href="{{ article.url }}">{{ article.title }}</a></h3>
+      <h3><a href="{{ article.url }}"><texy-typo>{{ article.title }}</texy-typo></a></h3>
       <time datetime="{{ article.published }}" class="media__date">{{ article.published | longDate }}</time>
-      <div class="media__description">{{ article.body | safe }}</div>
+      <div class="media__description">
+       <texy-typo>{{ article.body | safe }}</texy-typo>
+      </div>
     </div>
   </article>
 {% endmacro %}
@@ -38,7 +40,7 @@
       <div class="layout-wrapper">
         <div class="mdc-layout-grid__inner">
           <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-            <h2>Hlídač Shopů v médiích</h2>
+            <h2>Hlídač Shopů v médiích</h2>
           </div>
           <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
             <ul class="hs-year-selector" role="tablist" aria-label="Výběr ročníku">
@@ -64,4 +66,9 @@
       </div>
     </div>
   </section>
+{% endblock %}
+
+
+{% block scripts %}
+<script type="module" src="{{ "texy.js" | assetUrl("esm") }}"></script>
 {% endblock %}

@@ -31,6 +31,7 @@
     padding: 0;
     font-size: 24px;
     line-height: 29px;
+    text-wrap: balance;
   }
 
   a:link,
@@ -52,6 +53,7 @@
     font-size: 16px;
     line-height: 1.5;
     margin-top: 0.5em;
+    text-wrap: pretty;
   }
 
   .media__date {
@@ -65,7 +67,6 @@
   .media__description {
     font-size: 18px;
     line-height: 28px;
-    color: var(--mdc-theme-text-third-on-light);
   }
 
   .media__image {
