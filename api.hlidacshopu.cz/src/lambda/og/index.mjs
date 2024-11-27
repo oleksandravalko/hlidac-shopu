@@ -33,7 +33,8 @@ export async function handleRequest(event) {
   });
 
   const resp = await fetch(`${process.env.HOST}?${request}`, {
-    signal: AbortSignal.timeout(30000)
+    signal: AbortSignal.timeout(30000),
+    headers: event.headers
   });
   if (!resp.ok) {
     rollbar.error(resp.statusText, await resp.text());
