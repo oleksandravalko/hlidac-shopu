@@ -1,4 +1,3 @@
-import { setTimeout as sleep } from "node:timers/promises";
 import { HttpCrawler } from "@crawlee/http";
 import { PlaywrightCrawler } from "@crawlee/playwright";
 import { ActorType } from "@hlidac-shopu/actors-common/actor-type.js";
@@ -328,11 +327,11 @@ async function loadLazyContent({ page }) {
       window.scrollTo(0, scrolledBy);
       if (scrolledBy >= document.body.scrollHeight) break;
       scrollCount += 1;
-      await sleep(250);
+      await new Promise(resolve => setTimeout(resolve, 250));
     }
   });
 
-  await sleep(1000);
+  await new Promise(resolve => setTimeout(resolve, 1000));
   await page.waitForLoadState("networkidle");
 }
 
