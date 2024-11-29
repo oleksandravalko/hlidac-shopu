@@ -70,7 +70,7 @@ function shopTemplate({
       <th scope="row">${logoTemplate({ name, url, logo, viewBox })}</th>
       <td>${formatNumber(allProducts)}</td>
       <td>${formatNumber(bfProducts) ?? "-"}</td>
-      <td>${formatPercents(avgClaimedDiscount) ?? "-"}</td>
+      <td>${formatPercents(avgClaimedDiscount) ?? "neuvádí"}</td>
       <td>${formatPercents(avgRealDiscount) ?? "-"}</td>
       <td>${formatShortDate(startDate) ?? "-"}</td>
       <td>${formatShortDate(endDate) ?? "-"}</td>
