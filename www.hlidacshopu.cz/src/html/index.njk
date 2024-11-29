@@ -139,10 +139,10 @@
 {% endblock %}
 
 {% block meta %}
-<meta name="apple-itunes-app" content="app-id=1488295734">
-<meta name="apple-mobile-web-app-title" content="Hlídač shopů" />
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-itunes-app" content="app-id=1488295734">
+  <meta name="apple-mobile-web-app-title" content="Hlídač shopů">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 {% endblock %}
 
 {% block main %}
@@ -154,7 +154,7 @@
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
           <form id="compare-form" action="/">
             <div>
-              <h1>Ujistěte se, že nakupujete opravdu se slevou</h1>
+              <h1>Ujistěte se, že nakupujete opravdu se slevou</h1>
 
               <p property="abstract">Není sleva jako sleva. Někdy obchody těsně před vlnou slev uměle
                 navyšují původní ceny, aby konečná sleva působila výhodně. Hlídač
@@ -202,7 +202,19 @@
           <div
             id="e-shopy"
             class="logos mdc-layout-grid__cell mdc-layout-grid__cell--span-12"
-          ></div>
+          >
+            <ul>
+              {% for shop in filter.shopsToShowOnHP(shops) %}
+                <li>
+                  <a
+                    href="{{ shop.url }}"
+                    title="{{ shop.name }}"
+                    target="_blank"
+                    rel="noopener noreferrer"><img alt="{{ shop.name }}" src="/assets/img/{{ shop.logo }}.svg"></a>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -522,11 +534,11 @@
           <dd id="installs-count" class="number">40 000+</dd>
         </dl>
         <dl class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet">
-          <dt class="text--grey">Počet e-shopů</dt>
+          <dt class="text--grey">Sledovaných e-shopů</dt>
           <dd id="e-shops-count" class="number">29</dd>
         </dl>
         <dl class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet">
-          <dt class="text--grey">Počet produktů</dt>
+          <dt class="text--grey">Sledovaných produktů</dt>
           <dd id="products-count" class="number">2 250 000+</dd>
         </dl>
         <div property="aggregateRating" typeof="AggregateRating"
@@ -685,7 +697,8 @@
         <h2>Nejzajímavější slevy</h2>
         <p>
           Podívejte se na <b class="text--purple"
-          ><a href="https://public.tableau.com/app/profile/alena.me.ov./viz/TOP_SLEVY/Dashboard1"  target="tableau">Top slevy</a></b>.
+          ><a href="https://public.tableau.com/app/profile/alena.me.ov./viz/TOP_SLEVY/Dashboard1" target="tableau">Top
+              slevy</a></b>.
           Sledujte naše profily na
           <b class="text--purple"
           ><a href="https://www.facebook.com/hlidacshopu/">Facebooku</a></b
@@ -710,7 +723,13 @@
   <div id="hlidac-shopu-modal" class="modal modal--hidden">
     <div class="modal__inner">
       <div class="modal__close" title="Zavřít - Esc">
-        <a href="/"><svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" style="fill:#fff;transform:translateY(3px)"><path d="M0 0h24v24H0z" fill="none"/><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></a>
+        <a href="/">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" style="fill:#fff;transform:translateY(3px)">
+            <path d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+          </svg>
+        </a>
       </div>
       <div id="hlidac-shopu-modal__placeholder" class="modal__placeholder"></div>
     </div>

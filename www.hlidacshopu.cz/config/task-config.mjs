@@ -4,6 +4,7 @@ import projectPath from "@hckr_/blendid/lib/projectPath.mjs";
 import gulp_mode from "gulp-mode";
 import cssvariables from "postcss-css-variables";
 import pathConfig from "./path-config.mjs";
+import { ShopsRegistry } from "./shops.mjs";
 import { WorkboxBuildRegistry } from "./workboxbuild.mjs";
 
 /** @typedef {import("@types/nunjucks").Environment} Environment */
@@ -64,7 +65,7 @@ const config = {
   },
 
   html: {
-    collections: ["media", "images", "assets", "build", "dashboard"],
+    collections: ["media", "images", "assets", "build", "dashboard", "shops"],
     nunjucksRender: {
       globals: {
         currentYear: new Date().getFullYear()
@@ -113,12 +114,19 @@ const config = {
         globPatterns: ["app/index.html", "assets/**/*.{js,css}"]
       },
       pathConfig
-    )
+    ),
+    new ShopsRegistry({}, pathConfig)
   ],
 
   additionalTasks: {
-    development: { postbuild: ["workboxBuild"] },
-    production: { postbuild: ["workboxBuild"] }
+    development: {
+      prebuild: ["prepare-shops-data"],
+      postbuild: ["workboxBuild"]
+    },
+    production: {
+      prebuild: ["prepare-shops-data"],
+      postbuild: ["workboxBuild"]
+    }
   },
 
   vite: {

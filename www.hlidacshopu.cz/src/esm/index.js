@@ -1,7 +1,6 @@
 import { fetchShopsStats, fetchStats } from "@hlidac-shopu/lib/remoting.mjs";
-import { shops, shopsArray } from "@hlidac-shopu/lib/shops.mjs";
-import { logoTemplate } from "@hlidac-shopu/lib/templates.mjs";
-import { html, render } from "lit-html";
+import { shops } from "@hlidac-shopu/lib/shops.mjs";
+import { render } from "lit-html";
 import { Workbox } from "workbox-window";
 import * as rollbar from "./rollbar.js";
 import { resultsEmbed } from "./templates";
@@ -15,7 +14,6 @@ if ("serviceWorker" in navigator && isProduction()) {
 }
 
 const form = document.getElementById("compare-form");
-const eShops = document.getElementById("e-shopy");
 const eShopsCount = document.getElementById("e-shops-count");
 const productsCount = document.getElementById("products-count");
 const installsCount = document.getElementById("installs-count");
@@ -52,10 +50,13 @@ addEventListener("keydown", e => {
   }
 });
 
-const countInteractions = type => stats =>
-  stats
-    .filter(x => x.interactionType === `https:/schema.org/${type}`)
-    .reduce((acc, x) => acc + x.userInteractionCount, 0);
+function countInteractions(type) {
+  return stats =>
+    stats
+      .filter(x => x.interactionType === `https:/schema.org/${type}`)
+      .reduce((acc, x) => acc + x.userInteractionCount, 0);
+}
+
 const countReviews = countInteractions("ReviewAction");
 const countInstalls = countInteractions("InstallAction");
 
@@ -66,7 +67,6 @@ addEventListener("DOMContentLoaded", async e => {
     history.replaceState({ showModal: true, detailUri }, null);
     renderResultsModal(detailUri);
   }
-  render(eShopList(shopsArray().filter(x => x.viewBox)), eShops);
   setStoreUrls(searchParams);
   const installationGuideUrl = getInstallationGuideUrl(searchParams);
   if (installationGuideUrl) {
@@ -168,12 +168,4 @@ function findActiveBrowser(browsers, searchParams) {
   if (browser) return browser;
   const ua = navigator.userAgent.toLowerCase();
   return browsers.filter(x => ua.indexOf(x) > 0).shift();
-}
-
-function eShopList(shops) {
-  return html`
-    <ul>
-      ${shops.map(x => html` <li>${logoTemplate(x)}</li> `)}
-    </ul>
-  `;
 }
