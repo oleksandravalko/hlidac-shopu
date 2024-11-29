@@ -1,9 +1,7 @@
-import { fetchShopsStats, fetchStats } from "@hlidac-shopu/lib/remoting.mjs";
-import { shops } from "@hlidac-shopu/lib/shops.mjs";
 import { render } from "lit-html";
 import { Workbox } from "workbox-window";
 import * as rollbar from "./rollbar.js";
-import { resultsEmbed } from "./templates";
+import { resultsEmbed } from "./templates.js";
 
 rollbar.init();
 
@@ -14,10 +12,6 @@ if ("serviceWorker" in navigator && isProduction()) {
 }
 
 const form = document.getElementById("compare-form");
-const eShopsCount = document.getElementById("e-shops-count");
-const productsCount = document.getElementById("products-count");
-const installsCount = document.getElementById("installs-count");
-const reviewsCount = document.getElementById("rating-count");
 const modal = document.getElementById("hlidac-shopu-modal");
 const modalRenderRoot = document.getElementById("hlidac-shopu-modal__placeholder");
 const installationGuide = document.getElementById("extension-install-guide");
@@ -50,16 +44,6 @@ addEventListener("keydown", e => {
   }
 });
 
-function countInteractions(type) {
-  return stats =>
-    stats
-      .filter(x => x.interactionType === `https:/schema.org/${type}`)
-      .reduce((acc, x) => acc + x.userInteractionCount, 0);
-}
-
-const countReviews = countInteractions("ReviewAction");
-const countInstalls = countInteractions("InstallAction");
-
 addEventListener("DOMContentLoaded", async e => {
   const searchParams = new URLSearchParams(location.search);
   if (searchParams.has("url")) {
@@ -73,17 +57,6 @@ addEventListener("DOMContentLoaded", async e => {
     const client = await import(installationGuideUrl);
     render(client.installationGuide(), installationGuide);
   }
-  const shopsCount = Array.from(shops.keys()).filter(x => x.endsWith(".cz")).length;
-  eShopsCount.innerText = shopsCount.toLocaleString("cs");
-  const stats = await fetchStats();
-  installsCount.innerText = `${countInstalls(stats).toLocaleString("cs")}+`;
-  installsCount.setAttribute("title", "Chrome udává jen přibližné statistiky");
-  reviewsCount.innerText = countReviews(stats).toLocaleString("cs");
-
-  fetchShopsStats()
-    .then(xs => xs.reduce((acc, x) => acc + x.allProducts, 0))
-    .then(x => (!isNaN(x) ? (productsCount.innerText = x.toLocaleString("cs")) : null))
-    .catch(ex => console.warn(ex));
 });
 
 addEventListener("popstate", e => {

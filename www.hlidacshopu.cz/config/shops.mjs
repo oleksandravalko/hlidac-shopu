@@ -15,7 +15,12 @@ export class ShopsRegistry extends DefaultRegistry {
    */
   init({ task }) {
     task("prepare-shops-data", async () => {
-      const shops = shopsArray().map(x => ({ name: x.name, logo: x.logo, url: x.url, show: Boolean(x.viewBox) }));
+      const shops = shopsArray().map(x => ({
+        name: x.name,
+        logo: x.logo,
+        url: x.url,
+        show: x.show ?? Boolean(x.viewBox)
+      }));
       const targetPath = projectPath(this.pathConfig.src, this.pathConfig.data.src, "shops.json");
       return writeFile(targetPath, JSON.stringify(shops));
     });

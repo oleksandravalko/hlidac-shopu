@@ -4,7 +4,10 @@ import projectPath from "@hckr_/blendid/lib/projectPath.mjs";
 import gulp_mode from "gulp-mode";
 import cssvariables from "postcss-css-variables";
 import pathConfig from "./path-config.mjs";
+import { ReviewsRegistry } from "./reviews.mjs";
+import { ShopNumbersRegistry } from "./shop-numbers.mjs";
 import { ShopsRegistry } from "./shops.mjs";
+import { StatsRegistry } from "./stats.mjs";
 import { WorkboxBuildRegistry } from "./workboxbuild.mjs";
 
 /** @typedef {import("@types/nunjucks").Environment} Environment */
@@ -41,7 +44,16 @@ const config = {
   },
 
   generate: {
-    exclude: ["assets.json", "media.json", "images.json", "dashboard.json"],
+    exclude: [
+      "assets.json",
+      "media.json",
+      "images.json",
+      "dashboard.json",
+      "shops.json",
+      "shopNumbers.json",
+      "stats.json",
+      "reviews.json"
+    ],
     json: [
       {
         collection: "media",
@@ -65,7 +77,7 @@ const config = {
   },
 
   html: {
-    collections: ["media", "images", "assets", "build", "dashboard", "shops"],
+    collections: ["media", "images", "assets", "build", "dashboard", "shops", "shopNumbers", "stats", "reviews"],
     nunjucksRender: {
       globals: {
         currentYear: new Date().getFullYear()
@@ -115,22 +127,25 @@ const config = {
       },
       pathConfig
     ),
-    new ShopsRegistry({}, pathConfig)
+    new ReviewsRegistry({}, pathConfig),
+    new ShopsRegistry({}, pathConfig),
+    new ShopNumbersRegistry({}, pathConfig),
+    new StatsRegistry({}, pathConfig)
   ],
 
   additionalTasks: {
     development: {
-      prebuild: ["prepare-shops-data"],
+      prebuild: ["prepare-reviews-data", "prepare-shops-data", "prepare-stats-data", "prepare-shop-numbers-data"],
       postbuild: ["workboxBuild"]
     },
     production: {
-      prebuild: ["prepare-shops-data"],
+      prebuild: ["prepare-reviews-data", "prepare-shops-data", "prepare-stats-data", "prepare-shop-numbers-data"],
       postbuild: ["workboxBuild"]
     }
   },
 
   vite: {
-    browser: "polypane",
+    browser: "google chrome canary",
     browserArgs: "--ignore-certificate-errors --allow-insecure-localhost"
   }
 };

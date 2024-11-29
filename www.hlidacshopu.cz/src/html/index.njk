@@ -531,26 +531,26 @@
         </div>
         <dl class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet">
           <dt class="text--grey">Nainstalovaných rozšíření</dt>
-          <dd id="installs-count" class="number">40 000+</dd>
+          <dd id="installs-count" class="number" title="Chrome udává jen přibližné statistiky">{{ countInstalls(stats).toLocaleString("cs") }}+</dd>
         </dl>
         <dl class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet">
           <dt class="text--grey">Sledovaných e-shopů</dt>
-          <dd id="e-shops-count" class="number">29</dd>
+          <dd id="e-shops-count" class="number">{{ filter.shopsToShowOnHP(shops).length.toLocaleString("cs") }}</dd>
         </dl>
         <dl class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet">
           <dt class="text--grey">Sledovaných produktů</dt>
-          <dd id="products-count" class="number">2 250 000+</dd>
+          <dd id="products-count" class="number">{{ countProducts(shopNumbers).toLocaleString("cs")  }}+</dd>
         </dl>
         <div property="aggregateRating" typeof="AggregateRating"
              class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
           <div class="numbers mdc-layout-grid__inner">
             <dl class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet">
               <dt class="text--grey">Počet hodnocení</dt>
-              <dd property="ratingCount" id="rating-count" class="number">91</dd>
+              <dd property="ratingCount" id="rating-count" class="number">{{ countReviews(stats).toLocaleString("cs") }}</dd>
             </dl>
             <dl class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet">
               <dt class="text--grey">Počet recenzí</dt>
-              <dd property="reviewCount" id="review-count" class="number">29</dd>
+              <dd property="reviewCount" id="review-count" class="number">{{ reviews.length.toLocaleString("cs") }}</dd>
             </dl>
             <dl class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet">
               <dt class="text--grey">Celkové hodnocení</dt>
