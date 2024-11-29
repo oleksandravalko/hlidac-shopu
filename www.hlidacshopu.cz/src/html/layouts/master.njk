@@ -7,21 +7,6 @@
   <meta http-equiv="delegate-ch" content="sec-ch-width https://res.cloudinary.com; sec-ch-dpr https://res.cloudinary.com; sec-ch-viewport-width https://res.cloudinary.com;">
   <title>{% block title %}Hlídač shopů{% endblock %}</title>
   <link rel="preconnect" href="https://res.cloudinary.com">
-    <!-- Google Tag Manager -->
-  <script>(function(w, d, s, l, i) {
-      w[l] = w[l] || [];
-      w[l].push({
-        "gtm.start":
-          new Date().getTime(), event: "gtm.js"
-      });
-      var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s), dl = l != "dataLayer" ? "&l=" + l : "";
-      j.async = true;
-      j.src =
-        "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-      f.parentNode.insertBefore(j, f);
-    })(window, document, "script", "dataLayer", "GTM-58WNT3B");</script>
-  <!-- End Google Tag Manager -->
   <style>
     /* Subset: Latin1 */
     @font-face {
@@ -169,12 +154,6 @@
   {% block meta %}{% endblock %}
 </head>
 <body class="{{ bodyClass }}" vocab="https://schema.org" typeof="{{ type if type else 'WebPage' }}">
-<!-- Google Tag Manager (noscript) -->
-<noscript>
-  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-58WNT3B"
-          height="0" width="0" style="display:none;visibility:hidden"></iframe>
-</noscript>
-<!-- End Google Tag Manager (noscript) -->
 <header class="app-bar">
   <div class="mdc-layout-grid layout-wrapper">
     <div class="mdc-layout-grid__inner">
