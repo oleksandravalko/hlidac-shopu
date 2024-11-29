@@ -1,12 +1,12 @@
 {% macro sprite(id, altText, viewBox, classes) %}
-{% set viewBox = viewBox or "0 0 1 1"%}
-<span class='sprite sprite--{{id}} {{classes}}'>
-  <img alt="{{altText}}" src="{{ id | assetUrl("icons") }}.svg">
+  {% set viewBox = viewBox or "0 0 1 1" %}
+  <span class='sprite sprite--{{ id }} {{ classes }}'>
+  <img alt="{{ altText }}" src="{{ id | assetUrl("icons") }}.svg" loading="lazy">
 </span>
 {% endmacro %}
 
 {% macro spriteTarget() %}
-<div style="width: 0; height: 0; visibility: hidden; overflow: hidden">
-  <!-- inject:svg --><!-- endinject -->
-</div>
+  <div style="width: 0; height: 0; visibility: hidden; overflow: hidden">
+    <!-- inject:svg --><!-- endinject -->
+  </div>
 {% endmacro %}
