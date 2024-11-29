@@ -101,7 +101,7 @@ const config = {
   },
 
   production: {
-    rev: true
+    rev: { exclude: ["assets/img/*_logo.svg"] }
   },
 
   registries: [
