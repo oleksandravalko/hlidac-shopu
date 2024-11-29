@@ -1,21 +1,9 @@
 import { formatNumber, formatPercents, formatShortDate } from "@hlidac-shopu/lib/format.mjs";
 import { fetchDashboardV2Data } from "@hlidac-shopu/lib/remoting.mjs";
-import { rating, ratingStyles } from "@hlidac-shopu/lib/templates.mjs";
+import { logoTemplate, rating, ratingStyles } from "@hlidac-shopu/lib/templates.mjs";
 import { html, render, svg } from "lit";
 import { unsafeHTML } from "lit-html/directives/unsafe-html.js";
 import * as rollbar from "./rollbar.js";
-
-function logoTemplate({ logo, name, url, viewBox }) {
-  const image = svg`
-    <svg viewBox="${viewBox ?? ""}">
-      <title>${name}</title>
-      <use href="#${logo}"/>
-    </svg>
-  `;
-  return html`
-    <a href="${url}" class="sprite sprite--${logo}" title="${name}">${image}</a>
-  `;
-}
 
 function radialProgress({ ratio, isMonochrome }) {
   const circumference = 2 * Math.PI * 35;

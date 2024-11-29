@@ -39,12 +39,6 @@ const config = {
     }
   },
 
-  svgSprite: {
-    svgstore: {
-      inlineSvg: true
-    }
-  },
-
   generate: {
     exclude: ["assets.json", "media.json", "images.json", "dashboard.json"],
     json: [
@@ -102,7 +96,7 @@ const config = {
       target: ["es2017", "firefox67", "safari12"],
       charset: "utf8",
       metafile: true,
-      metafileName: `../../../../www.hlidacshopu.cz/src/data/assets.json`
+      metafileName: "../../../../www.hlidacshopu.cz/src/data/assets.json"
     }
   },
 
@@ -125,6 +119,11 @@ const config = {
   additionalTasks: {
     development: { postbuild: ["workboxBuild"] },
     production: { postbuild: ["workboxBuild"] }
+  },
+
+  vite: {
+    browser: "polypane",
+    browserArgs: "--ignore-certificate-errors --allow-insecure-localhost"
   }
 };
 

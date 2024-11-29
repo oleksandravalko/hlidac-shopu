@@ -1,6 +1,6 @@
 import { formatNumber, formatPercents, formatShortDate } from "@hlidac-shopu/lib/format.mjs";
 import { fetchDashboardData } from "@hlidac-shopu/lib/remoting.mjs";
-import { rating } from "@hlidac-shopu/lib/templates.mjs";
+import { logoTemplate, rating } from "@hlidac-shopu/lib/templates.mjs";
 import { html, render, svg } from "lit-html";
 import * as Rollbar from "./rollbar.js";
 
@@ -76,18 +76,6 @@ function shopTemplate({
       <td>${formatShortDate(endDate) ?? "-"}</td>
       <td>${rating(ratingValue, { maxValue: 3 }) ?? "-"}</td>
     </tr>
-  `;
-}
-
-function logoTemplate({ logo, name, url, viewBox }) {
-  const image = svg`
-    <svg viewBox="${viewBox ?? ""}">
-      <title>${name}</title>
-      <use href="#${logo}"/>
-    </svg>
-  `;
-  return html`
-    <a href="${url}" class="sprite sprite--${logo}" title="${name}">${image}</a>
   `;
 }
 
