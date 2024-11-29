@@ -5,7 +5,7 @@
 
 {% block preload %}
   <link rel="preload" as="font" crossorigin="anonymous" href="/assets/css/IBMPlexSansVar-Italic-Latin1.woff2">
-  <link rel="preload" as="image"  href="/assets/img/bg.svg">
+  <link rel="preload" as="image" href="/assets/img/bg.svg">
   <link rel="modulepreload" href="{{ "index.js" | assetUrl("esm") }}">
   {% set imports = assets.outputs["index.js"].imports %}
   {% for import in imports %}
@@ -210,7 +210,10 @@
                     href="{{ shop.url }}"
                     title="{{ shop.name }}"
                     target="_blank"
-                    rel="noopener noreferrer"><img alt="{{ shop.name }}" src="/assets/img/{{ shop.logo }}.svg" loading="lazy"></a>
+                    rel="noopener noreferrer">
+                    <img alt="{{ shop.name }}" src="/assets/img/{{ shop.logo }}.svg"
+                         width="{{ shop.width }}" height="{{ shop.height }}"
+                         loading="lazy"></a>
                 </li>
               {% endfor %}
             </ul>
@@ -531,7 +534,9 @@
         </div>
         <dl class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet">
           <dt class="text--grey">Nainstalovaných rozšíření</dt>
-          <dd id="installs-count" class="number" title="Chrome udává jen přibližné statistiky">{{ countInstalls(stats).toLocaleString("cs") }}+</dd>
+          <dd id="installs-count" class="number"
+              title="Chrome udává jen přibližné statistiky">{{ countInstalls(stats).toLocaleString("cs") }}+
+          </dd>
         </dl>
         <dl class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet">
           <dt class="text--grey">Sledovaných e-shopů</dt>
@@ -539,14 +544,15 @@
         </dl>
         <dl class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet">
           <dt class="text--grey">Sledovaných produktů</dt>
-          <dd id="products-count" class="number">{{ countProducts(shopNumbers).toLocaleString("cs")  }}+</dd>
+          <dd id="products-count" class="number">{{ countProducts(shopNumbers).toLocaleString("cs") }}+</dd>
         </dl>
         <div property="aggregateRating" typeof="AggregateRating"
              class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
           <div class="numbers mdc-layout-grid__inner">
             <dl class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet">
               <dt class="text--grey">Počet hodnocení</dt>
-              <dd property="ratingCount" id="rating-count" class="number">{{ countReviews(stats).toLocaleString("cs") }}</dd>
+              <dd property="ratingCount" id="rating-count"
+                  class="number">{{ countReviews(stats).toLocaleString("cs") }}</dd>
             </dl>
             <dl class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet">
               <dt class="text--grey">Počet recenzí</dt>

@@ -14,6 +14,7 @@
   }
 
   img {
+    width: auto;
     height: 16px;
     filter: saturate(0);
     transition: 0.3s filter ease-in;
@@ -32,6 +33,7 @@
   }
 
   img {
+    height: unset;
     filter: saturate(0);
     max-width: 180px;
 
