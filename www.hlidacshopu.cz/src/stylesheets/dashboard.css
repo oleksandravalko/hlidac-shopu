@@ -1,10 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=BIZ+UDMincho&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=BIZ+UDMincho&display=swap");
 
 .dashboard {
-  background-color: #FBFBFF;
+  background-color: #fbfbff;
 
   h2 {
     font-size: 40px;
+    line-height: 1.2;
+    text-wrap: pretty;
   }
 
   h3 {
@@ -31,7 +33,7 @@
     }
 
     blockquote {
-      background-color: #EBEEF2;
+      background-color: #ebeef2;
       border-radius: 10px;
       display: flex;
       align-items: center;
@@ -42,7 +44,7 @@
       }
       &:before {
         content: '"';
-        font-family: 'BIZ UDMincho', serif;
+        font-family: "BIZ UDMincho", serif;
         font-size: 120px;
         font-weight: 400;
         color: #ffffff;
