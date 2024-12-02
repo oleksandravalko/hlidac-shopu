@@ -1,9 +1,11 @@
+{% set year = 2024 %}
+{% set url = "https://blog.apify.com/black-friday-2024-najezd-trzist-ze-zahranici/" %}
+{% set mobileBanner = images["mobile-banner-2024.png"]["public_id"] %}
+{% set desktopBanner = images["desktop-banner-2024.png"]["public_id"] %}
 <a
-  href="https://blog.apify.com/black-friday-2023-poprve-s-novymi-pravidly/"
-  title="Přečtě si výsledky Analýzy Black Friday 2023">
+  href="{{ url }}"
+  title="Přečtě si výsledky Analýzy Black Friday {{ year }}">
   <picture>
-    {% set mobileBanner = images["mobile-banner-2023.png"]["public_id"] %}
-    {% set desktopBanner = images["desktop-banner-2023.png"]["public_id"] %}
     <source
       media="screen and (max-width: 360px)"
       srcset="{{ mobileBanner | cloudinaryUrl(width=328) }} 1x,
@@ -24,7 +26,7 @@
       srcset="{{ desktopBanner | cloudinaryUrl(width=1008) }} 1x,
               {{ desktopBanner | cloudinaryUrl(width=1008,dpr=1.5) }} 1.5x,
               {{ desktopBanner | cloudinaryUrl(width=1008,dpr=2) }} 2x">
-    <img alt="Analýza Black Friday 2023" class="responsive"
+    <img alt="Analýza Black Friday {{ year }}" class="responsive"
          src="{{ mobileBanner | cloudinaryUrl(width=480,dpr="auto") }} ">
   </picture>
 </a>
