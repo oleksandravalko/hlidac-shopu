@@ -1,7 +1,6 @@
 import { render } from "lit-html";
 import { Workbox } from "workbox-window";
 import * as rollbar from "./rollbar.js";
-import { resultsEmbed } from "./templates.js";
 
 rollbar.init();
 
@@ -88,7 +87,9 @@ function hideResultsModal() {
 }
 
 async function renderResultsModal(detailUrl) {
-  render(resultsEmbed(detailUrl), modalRenderRoot);
+  const iframe = modalRenderRoot.querySelector("iframe");
+  const parameters = new URLSearchParams({ url: detailUrl, view: "embed" });
+  iframe.src += parameters;
   showResultsModal();
 }
 
@@ -115,7 +116,7 @@ function setStoreUrls(searchParams) {
   const browsers = Array.from(storeLinks.keys());
   const browser = findActiveBrowser(browsers, searchParams);
   const links = document.querySelectorAll(".store-link");
-  for (let link of links) {
+  for (const link of links) {
     link.dataset.browser = browser ?? link.dataset.browser;
     link.href = storeLinks.get(browser) ?? link.href;
   }
@@ -132,13 +133,14 @@ const guides = new Map([
 function getInstallationGuideUrl(searchParams) {
   const browsers = Array.from(guides.keys());
   const browser = findActiveBrowser(browsers, searchParams);
+  // TODO: only change visibility
   return guides.get(browser);
 }
 
 function findActiveBrowser(browsers, searchParams) {
   // forcing UA via get parameters has precedence
-  let browser = browsers.filter(x => searchParams.has(x)).pop();
+  const browser = browsers.filter(x => searchParams.has(x)).at(-1);
   if (browser) return browser;
   const ua = navigator.userAgent.toLowerCase();
-  return browsers.filter(x => ua.indexOf(x) > 0).shift();
+  return browsers.find(x => ua.indexOf(x) > 0);
 }
