@@ -7,13 +7,11 @@ import { parseHTML } from "linkedom/cached";
 
 const test = false;
 const urls = [
-  "https://www.idnes.cz/ekonomika/domaci/black-friday-e-shop-sleva-darek-vanoce-obchodnik.A241124_180215_ekonomika_vals",
-  "https://www.penize.cz/nakupy/463802-black-friday-je-tady-expertka-radi-jak-v-zaplave-slev-nenaletet",
-  "https://forbes.cz/zradny-black-friday-jake-jsou-nove-triky-prodejcu-a-pro-koho-akce-idealni-neni/",
-  "https://www.e15.cz/videoporady/flow/pozor-na-temu-a-dalsi-trziste-na-black-friday-nedodrzuji-pravidla-a-klamou-zakazniky-varuje-analyticka-gelnerova-1419994",
-  "https://www.echo24.cz/a/HuUwQ/inzerce-slevy-v-obchodech-skutecne",
-  "https://www.zive.cz/clanky/black-friday-slevy-jen-pro-oko-podle-hlidace-shopu-nejhur-dopadl-kaufland/sc-3-a-225771/default.aspx",
-  "https://www.mediaguru.cz/clanky/2023/12/prehled-udalosti-v-marketingu-v-roce-2023/"
+  "https://www.expats.cz/czech-news/article/black-friday-is-here-experts-share-tips-on-how-to-avoid-scams",
+  "https://www.e15.cz/byznys/obchod-a-sluzby/dnes-je-black-friday-na-ktere-slevy-si-dat-pozor-1420504",
+  "https://www.svetandroida.cz/black-friday-jak-poznat-skutecne-slevy/",
+  "https://www.impuls.cz/regiony/redakce-doporucuje/zahranicni-trziste-u-slev-vubec-nedodrzuji-pravidla-varoval-na-impulsu-jakub-balada-z-hlidace-shopu.A241128_140114_imp-redakce_dolez",
+  "https://zpravy.aktualne.cz/datavize/black-friday/r~e9e9cbe0abe711ef9a9dac1f6b220ee8/"
 ];
 
 const template = ({ url, title, date, perex, filename }) => `---
