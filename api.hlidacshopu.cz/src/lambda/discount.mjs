@@ -20,7 +20,7 @@ import { drop, groupBy, head, last, zipWith } from "ramda";
 
 /**
  * @param {number} previous
- * @param {number} actual
+ * @param {number|null} actual
  * @returns {number|null}
  */
 export function discount(previous, actual) {

@@ -1,5 +1,5 @@
 import test from "ava";
-import { prepareData } from "./discount.mjs";
+import { discount, prepareData } from "./discount.mjs";
 
 const historicalData = {
   "entries": [
@@ -16,4 +16,16 @@ const historicalData = {
 test("prepareData should return ", t => {
   prepareData(historicalData);
   t.pass();
+});
+
+test("discount of the discontinued item should be null", t => {
+  t.is(discount(1, null), null);
+});
+
+test("discount for the same prices should be 0", t => {
+  t.is(discount(1, 1), 0);
+});
+
+test("discount for discounted item should be as expected", t => {
+  t.is(discount(1, 0.1), 0.9);
 });
