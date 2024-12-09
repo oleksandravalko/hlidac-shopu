@@ -1,5 +1,4 @@
-.media-page {
-  overflow-y: scroll;
+html {
   scroll-behavior: smooth;
 }
 
