@@ -7,11 +7,10 @@ import { parseHTML } from "linkedom/cached";
 
 const test = false;
 const urls = [
-  "https://www.expats.cz/czech-news/article/black-friday-is-here-experts-share-tips-on-how-to-avoid-scams",
-  "https://www.e15.cz/byznys/obchod-a-sluzby/dnes-je-black-friday-na-ktere-slevy-si-dat-pozor-1420504",
-  "https://www.svetandroida.cz/black-friday-jak-poznat-skutecne-slevy/",
-  "https://www.impuls.cz/regiony/redakce-doporucuje/zahranicni-trziste-u-slev-vubec-nedodrzuji-pravidla-varoval-na-impulsu-jakub-balada-z-hlidace-shopu.A241128_140114_imp-redakce_dolez",
-  "https://zpravy.aktualne.cz/datavize/black-friday/r~e9e9cbe0abe711ef9a9dac1f6b220ee8/"
+  "https://www.zive.cz/clanky/ceske-e-shopy-uz-na-black-friday-prilis-nepodvadeji-smejdske-praktiky-ale-zkousi-zahranicni-trziste/sc-3-a-231680/default.aspx",
+  "https://www.denik.cz/ekonomika/black-friday-cesko-trzby.html",
+  "https://roklen24.cz/?quick_news=black-friday-2024-zahranicni-trziste-pravidla-obchazela-ceske-e-shopy-se-naopak-vyrazne-zlepsily",
+  "https://www.penize.cz/slevy/465130-skutecne-slevy-behem-black-friday-nasli-jsme-triky-e-shopu"
 ];
 
 const template = ({ url, title, date, perex, filename }) => `---
