@@ -54,7 +54,7 @@ function extractProducts({ document }) {
         itemId,
         itemUrl: canonical(item.querySelector("h3 a").getAttribute("href")),
         itemName: item.querySelector("span.name").innerText,
-        img: item.querySelector("picture img").getAttribute("src"),
+        img: item.querySelector("img").getAttribute("srcset"),
         currentPrice: currentPrice === "zdarma" ? 0 : (cleanPrice(currentPrice) ?? null),
         originalPrice: originalPrice != null ? cleanPrice(originalPrice) ?? null: null,
         discounted,
