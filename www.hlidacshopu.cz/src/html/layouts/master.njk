@@ -1,4 +1,4 @@
-{% from 'macros/helpers.njk' import sprite %}
+{%- from 'macros/helpers.njk' import sprite -%}
 <!DOCTYPE html>
 <html lang="cs">
 <head>
@@ -140,6 +140,8 @@
   <link rel="preload" as="font" crossorigin="anonymous" href="/assets/css/IBMPlexSansVar-Roman-Latin2.woff2">
   {% block preload %}{% endblock %}
   <meta name="description" content="Ujistěte se, že nakupujete opravdu se slevou">
+  <meta name="generator" content="{{ generator or '@hckr_/blendid - static site generator and assets pipeline' }}">
+  <meta name="author" content="https://hckr.studio/">
   <meta name="twitter:description" property="og:description" content="Ujistěte se, že nakupujete opravdu se slevou">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@hlidacshopucz">
