@@ -4483,9 +4483,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@hckr_/blendid@npm:9.0.1":
-  version: 9.0.1
-  resolution: "@hckr_/blendid@npm:9.0.1"
+"@hckr_/blendid@npm:9.1.0":
+  version: 9.1.0
+  resolution: "@hckr_/blendid@npm:9.1.0"
   dependencies:
     "@csstools/postcss-gamut-mapping": "npm:2.0.6"
     "@vitejs/plugin-basic-ssl": "npm:1.2.0"
@@ -4512,7 +4512,7 @@ __metadata:
     gulp-svgstore: "npm:9.0.0"
     gulplog: "npm:2.2.0"
     lodash-es: "npm:4.17.21"
-    marked: "npm:15.0.3"
+    marked: "npm:15.0.4"
     marked-gfm-heading-id: "npm:4.1.1"
     marked-highlight: "npm:2.2.1"
     marked-mangle: "npm:1.1.10"
@@ -4523,7 +4523,7 @@ __metadata:
     postcss: "npm:8.4.49"
     postcss-functions: "npm:4.0.2"
     postcss-import: "npm:16.1.0"
-    postcss-preset-env: "npm:10.1.1"
+    postcss-preset-env: "npm:10.1.2"
     rev-hash: "npm:4.1.0"
     rev-path: "npm:3.0.0"
     sort-keys: "npm:5.1.0"
@@ -4531,10 +4531,10 @@ __metadata:
     undertaker-registry: "npm:2.0.0"
     vinyl: "npm:3.0.0"
     vinyl-file: "npm:5.0.0"
-    vite: "npm:6.0.3"
+    vite: "npm:6.0.5"
   bin:
     blendid: bin/blendid.js
-  checksum: 10c0/cd0db53196e59b171c2a9b11590cbf92bbb4f118d357012e4f92c3b875803966bd7ee38c85e9108f1b197d1250fdfaa96d5271f4a0492cf99056e277c2b42671
+  checksum: 10c0/b931260ea576d6855f1166fc8074bd6525cc1b5e42f11bd81375188bafb60ed20aaf50b2fa9054a960db182f938c43284cc8d4d9d7679feecf2624799efa4c80
   languageName: node
   linkType: hard
 
@@ -4546,7 +4546,7 @@ __metadata:
     "@hlidac-shopu/actors-common": "npm:3.0.0"
     "@types/node": "npm:22.10.2"
     apify: "npm:3.2.6"
-    apify-cli: "npm:0.20.12"
+    apify-cli: "npm:0.20.13"
   languageName: unknown
   linkType: soft
 
@@ -4573,7 +4573,7 @@ __metadata:
     "@thi.ng/transducers": "npm:9.2.10"
     "@types/node": "npm:22.10.2"
     apify: "npm:3.2.6"
-    apify-cli: "npm:0.20.12"
+    apify-cli: "npm:0.20.13"
   languageName: unknown
   linkType: soft
 
@@ -4585,7 +4585,7 @@ __metadata:
     "@hlidac-shopu/actors-common": "npm:3.0.0"
     "@types/node": "npm:22.10.2"
     apify: "npm:3.2.6"
-    apify-cli: "npm:0.20.12"
+    apify-cli: "npm:0.20.13"
   languageName: unknown
   linkType: soft
 
@@ -4599,7 +4599,7 @@ __metadata:
     "@topmonks/eu-shop-monitoring-lib": "npm:1.2.3"
     "@types/node": "npm:22.10.2"
     apify: "npm:3.2.6"
-    apify-cli: "npm:0.20.12"
+    apify-cli: "npm:0.20.13"
   languageName: unknown
   linkType: soft
 
@@ -4640,7 +4640,7 @@ __metadata:
     "@hlidac-shopu/lib": "npm:1.4.0"
     "@types/node": "npm:22.10.2"
     apify: "npm:3.2.6"
-    apify-cli: "npm:0.20.12"
+    apify-cli: "npm:0.20.13"
   languageName: unknown
   linkType: soft
 
@@ -4652,7 +4652,7 @@ __metadata:
     "@hlidac-shopu/actors-common": "npm:3.0.0"
     "@types/node": "npm:22.10.2"
     apify: "npm:3.2.6"
-    apify-cli: "npm:0.20.12"
+    apify-cli: "npm:0.20.13"
   languageName: unknown
   linkType: soft
 
@@ -4666,7 +4666,7 @@ __metadata:
     "@topmonks/eu-shop-monitoring-lib": "npm:1.2.3"
     "@types/node": "npm:22.10.2"
     apify: "npm:3.2.6"
-    apify-cli: "npm:0.20.12"
+    apify-cli: "npm:0.20.13"
   languageName: unknown
   linkType: soft
 
@@ -4678,7 +4678,7 @@ __metadata:
     "@hlidac-shopu/actors-common": "npm:3.0.0"
     "@types/node": "npm:22.10.2"
     apify: "npm:3.2.6"
-    apify-cli: "npm:0.20.12"
+    apify-cli: "npm:0.20.13"
     got-scraping: "npm:4.0.8"
   languageName: unknown
   linkType: soft
@@ -4691,7 +4691,7 @@ __metadata:
     "@hlidac-shopu/actors-common": "npm:3.0.0"
     "@types/node": "npm:22.10.2"
     apify: "npm:3.2.6"
-    apify-cli: "npm:0.20.12"
+    apify-cli: "npm:0.20.13"
   languageName: unknown
   linkType: soft
 
@@ -4704,7 +4704,7 @@ __metadata:
     "@hlidac-shopu/actors-common": "npm:3.0.0"
     "@types/node": "npm:22.10.2"
     apify: "npm:3.2.6"
-    apify-cli: "npm:0.20.12"
+    apify-cli: "npm:0.20.13"
     got-scraping: "npm:4.0.8"
     playwright: "npm:1.49.1"
   languageName: unknown
@@ -4718,7 +4718,7 @@ __metadata:
     "@hlidac-shopu/actors-common": "npm:3.0.0"
     "@types/node": "npm:22.10.2"
     apify: "npm:3.2.6"
-    apify-cli: "npm:0.20.12"
+    apify-cli: "npm:0.20.13"
   languageName: unknown
   linkType: soft
 
@@ -4730,7 +4730,7 @@ __metadata:
     "@hlidac-shopu/actors-common": "npm:3.0.0"
     "@types/node": "npm:22.10.2"
     apify: "npm:3.2.6"
-    apify-cli: "npm:0.20.12"
+    apify-cli: "npm:0.20.13"
   languageName: unknown
   linkType: soft
 
@@ -4751,7 +4751,7 @@ __metadata:
     "@hlidac-shopu/actors-common": "npm:3.0.0"
     "@types/node": "npm:22.10.2"
     apify: "npm:3.2.6"
-    apify-cli: "npm:0.20.12"
+    apify-cli: "npm:0.20.13"
   languageName: unknown
   linkType: soft
 
@@ -4765,7 +4765,7 @@ __metadata:
     "@hlidac-shopu/actors-common": "npm:3.0.0"
     "@types/node": "npm:22.10.2"
     apify: "npm:3.2.6"
-    apify-cli: "npm:0.20.12"
+    apify-cli: "npm:0.20.13"
     csv-parse: "npm:5.6.0"
     jsonwebtoken: "npm:9.0.2"
   languageName: unknown
@@ -4779,7 +4779,7 @@ __metadata:
     "@hlidac-shopu/actors-common": "npm:3.0.0"
     "@types/node": "npm:22.10.2"
     apify: "npm:3.2.6"
-    apify-cli: "npm:0.20.12"
+    apify-cli: "npm:0.20.13"
   languageName: unknown
   linkType: soft
 
@@ -4792,7 +4792,7 @@ __metadata:
     "@hlidac-shopu/lib": "npm:1.4.0"
     "@types/node": "npm:22.10.2"
     apify: "npm:3.2.6"
-    apify-cli: "npm:0.20.12"
+    apify-cli: "npm:0.20.13"
   languageName: unknown
   linkType: soft
 
@@ -4800,7 +4800,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@hlidac-shopu/infrastructure@workspace:infrastructure"
   dependencies:
-    "@pulumi/aws": "npm:6.65.0"
+    "@pulumi/aws": "npm:6.66.1"
     "@pulumi/awsx": "npm:2.19.0"
     "@pulumi/pulumi": "npm:3.144.1"
     "@topmonks/pulumi-aws": "npm:3.1.4"
@@ -4816,7 +4816,7 @@ __metadata:
     "@hlidac-shopu/actors-common": "npm:3.0.0"
     "@types/node": "npm:22.10.2"
     apify: "npm:3.2.6"
-    apify-cli: "npm:0.20.12"
+    apify-cli: "npm:0.20.13"
     puppeteer: "npm:23.11.1"
   languageName: unknown
   linkType: soft
@@ -4829,7 +4829,7 @@ __metadata:
     "@hlidac-shopu/actors-common": "npm:3.0.0"
     "@types/node": "npm:22.10.2"
     apify: "npm:3.2.6"
-    apify-cli: "npm:0.20.12"
+    apify-cli: "npm:0.20.13"
   languageName: unknown
   linkType: soft
 
@@ -4841,7 +4841,7 @@ __metadata:
     "@hlidac-shopu/actors-common": "npm:3.0.0"
     "@types/node": "npm:22.10.2"
     apify: "npm:3.2.6"
-    apify-cli: "npm:0.20.12"
+    apify-cli: "npm:0.20.13"
   languageName: unknown
   linkType: soft
 
@@ -4854,7 +4854,7 @@ __metadata:
     "@hlidac-shopu/lib": "npm:1.4.0"
     "@types/node": "npm:22.10.2"
     apify: "npm:3.2.6"
-    apify-cli: "npm:0.20.12"
+    apify-cli: "npm:0.20.13"
   languageName: unknown
   linkType: soft
 
@@ -4866,7 +4866,7 @@ __metadata:
     "@hlidac-shopu/actors-common": "npm:3.0.0"
     "@types/node": "npm:22.10.2"
     apify: "npm:3.2.6"
-    apify-cli: "npm:0.20.12"
+    apify-cli: "npm:0.20.13"
   languageName: unknown
   linkType: soft
 
@@ -4894,7 +4894,7 @@ __metadata:
     "@hlidac-shopu/actors-common": "npm:3.0.0"
     "@types/node": "npm:22.10.2"
     apify: "npm:3.2.6"
-    apify-cli: "npm:0.20.12"
+    apify-cli: "npm:0.20.13"
     playwright: "npm:1.49.1"
   languageName: unknown
   linkType: soft
@@ -4908,7 +4908,7 @@ __metadata:
     "@hlidac-shopu/lib": "npm:1.4.0"
     "@types/node": "npm:22.10.2"
     apify: "npm:3.2.6"
-    apify-cli: "npm:0.20.12"
+    apify-cli: "npm:0.20.13"
     got-scraping: "npm:4.0.8"
     graphql: "npm:16.10.0"
     graphql-tag: "npm:2.12.6"
@@ -4923,7 +4923,7 @@ __metadata:
     "@hlidac-shopu/actors-common": "npm:3.0.0"
     "@types/node": "npm:22.10.2"
     apify: "npm:3.2.6"
-    apify-cli: "npm:0.20.12"
+    apify-cli: "npm:0.20.13"
   languageName: unknown
   linkType: soft
 
@@ -4935,7 +4935,7 @@ __metadata:
     "@hlidac-shopu/actors-common": "npm:3.0.0"
     "@types/node": "npm:22.10.2"
     apify: "npm:3.2.6"
-    apify-cli: "npm:0.20.12"
+    apify-cli: "npm:0.20.13"
   languageName: unknown
   linkType: soft
 
@@ -4970,7 +4970,7 @@ __metadata:
     "@hlidac-shopu/lib": "npm:1.4.0"
     "@types/node": "npm:22.10.2"
     apify: "npm:3.2.6"
-    apify-cli: "npm:0.20.12"
+    apify-cli: "npm:0.20.13"
     playwright: "npm:1.49.1"
   languageName: unknown
   linkType: soft
@@ -4983,7 +4983,7 @@ __metadata:
     "@hlidac-shopu/actors-common": "npm:3.0.0"
     "@types/node": "npm:22.10.2"
     apify: "npm:3.2.6"
-    apify-cli: "npm:0.20.12"
+    apify-cli: "npm:0.20.13"
   languageName: unknown
   linkType: soft
 
@@ -4995,7 +4995,7 @@ __metadata:
     "@hlidac-shopu/actors-common": "npm:3.0.0"
     "@types/node": "npm:22.10.2"
     apify: "npm:3.2.6"
-    apify-cli: "npm:0.20.12"
+    apify-cli: "npm:0.20.13"
   languageName: unknown
   linkType: soft
 
@@ -5008,7 +5008,7 @@ __metadata:
     "@hlidac-shopu/lib": "npm:1.4.0"
     "@types/node": "npm:22.10.2"
     apify: "npm:3.2.6"
-    apify-cli: "npm:0.20.12"
+    apify-cli: "npm:0.20.13"
   languageName: unknown
   linkType: soft
 
@@ -5023,7 +5023,7 @@ __metadata:
     "@thi.ng/transducers": "npm:9.2.10"
     "@types/node": "npm:22.10.2"
     apify: "npm:3.2.6"
-    apify-cli: "npm:0.20.12"
+    apify-cli: "npm:0.20.13"
     core-async: "npm:2.0.6"
   languageName: unknown
   linkType: soft
@@ -5044,7 +5044,7 @@ __metadata:
     "@hlidac-shopu/actors-common": "npm:3.0.0"
     "@types/node": "npm:22.10.2"
     apify: "npm:3.2.6"
-    apify-cli: "npm:0.20.12"
+    apify-cli: "npm:0.20.13"
     linkedom: "npm:0.18.6"
   languageName: unknown
   linkType: soft
@@ -5057,7 +5057,7 @@ __metadata:
     "@hlidac-shopu/actors-common": "npm:3.0.0"
     "@types/node": "npm:22.10.2"
     apify: "npm:3.2.6"
-    apify-cli: "npm:0.20.12"
+    apify-cli: "npm:0.20.13"
   languageName: unknown
   linkType: soft
 
@@ -5069,7 +5069,7 @@ __metadata:
     "@hlidac-shopu/actors-common": "npm:3.0.0"
     "@types/node": "npm:22.10.2"
     apify: "npm:3.2.6"
-    apify-cli: "npm:0.20.12"
+    apify-cli: "npm:0.20.13"
     playwright: "npm:1.49.1"
   languageName: unknown
   linkType: soft
@@ -5082,7 +5082,7 @@ __metadata:
     "@hlidac-shopu/actors-common": "npm:3.0.0"
     "@types/node": "npm:22.10.2"
     apify: "npm:3.2.6"
-    apify-cli: "npm:0.20.12"
+    apify-cli: "npm:0.20.13"
   languageName: unknown
   linkType: soft
 
@@ -5106,7 +5106,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@hlidac-shopu/web@workspace:www.hlidacshopu.cz"
   dependencies:
-    "@hckr_/blendid": "npm:9.0.1"
+    "@hckr_/blendid": "npm:9.1.0"
     "@hlidac-shopu/lib": "workspace:*"
     "@material/button": "npm:14.0.0"
     "@material/icon-button": "npm:14.0.0"
@@ -6304,15 +6304,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pulumi/aws@npm:6.65.0":
-  version: 6.65.0
-  resolution: "@pulumi/aws@npm:6.65.0"
+"@pulumi/aws@npm:6.66.1":
+  version: 6.66.1
+  resolution: "@pulumi/aws@npm:6.66.1"
   dependencies:
-    "@pulumi/pulumi": "npm:^3.136.0"
+    "@pulumi/pulumi": "npm:^3.142.0"
     builtin-modules: "npm:3.0.0"
     mime: "npm:^2.0.0"
     resolve: "npm:^1.7.1"
-  checksum: 10c0/1f55a1bd536f6c6632178d7d9dbbbe58f6550b3e6f053955773f8a58dbebda935977747743d79db0c62124322c690b28ed7fa494757bbd3e7a41d2bd5629d86b
+  checksum: 10c0/bb0ff4f3db4c17aca65c8ca2d08b3ce18bc9894bb5ca9b7d9d27321b7109a1b083b670e6866899d38dd1914309de5af7e36f3f58d04a6d11fa43b796abd7fc24
   languageName: node
   linkType: hard
 
@@ -6353,7 +6353,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pulumi/pulumi@npm:3.144.1":
+"@pulumi/pulumi@npm:3.144.1, @pulumi/pulumi@npm:^3.142.0":
   version: 3.144.1
   resolution: "@pulumi/pulumi@npm:3.144.1"
   dependencies:
@@ -9458,9 +9458,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"apify-cli@npm:0.20.12":
-  version: 0.20.12
-  resolution: "apify-cli@npm:0.20.12"
+"apify-cli@npm:0.20.13":
+  version: 0.20.13
+  resolution: "apify-cli@npm:0.20.13"
   dependencies:
     "@apify/actor-templates": "npm:~0.1.5"
     "@apify/consts": "npm:~2.35.0"
@@ -9503,7 +9503,7 @@ __metadata:
     write-json-file: "npm:~6.0.0"
   bin:
     apify: ./bin/run.js
-  checksum: 10c0/6d74f69a5c280c9fdc61ee1053584d3e237ef1a7a9a10e9188f58877e40f84cd6d203469a8589f8b96686baf811d95264f49f77ad90d7ed20c7b29a887d929f7
+  checksum: 10c0/8305a132e540d805bd89c01d6e8b3d2a83c70cd351973b9d06a1376fd2b861c661f6740952624359e950b0fa9254fff218ee05924971b54aaa1133d1c6e96e4b
   languageName: node
   linkType: hard
 
@@ -11782,16 +11782,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"css-has-pseudo@npm:^7.0.1":
-  version: 7.0.1
-  resolution: "css-has-pseudo@npm:7.0.1"
+"css-has-pseudo@npm:^7.0.2":
+  version: 7.0.2
+  resolution: "css-has-pseudo@npm:7.0.2"
   dependencies:
     "@csstools/selector-specificity": "npm:^5.0.0"
     postcss-selector-parser: "npm:^7.0.0"
     postcss-value-parser: "npm:^4.2.0"
   peerDependencies:
     postcss: ^8.4
-  checksum: 10c0/13789b08b70169204be786d652190356ace9313099d3656bd2fc38afbdd28f3d9620f0e0b07425480961b7a1ec789794961d0472f205b959d3f64c9a78ce511c
+  checksum: 10c0/456e9ce1eec8a535683c329956acfe53ce5a208345d7f2fcbe662626be8b3c98681e9041d7f4980316714397b0c1c3defde25653d629c396df17803d599c4edf
   languageName: node
   linkType: hard
 
@@ -11867,10 +11867,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cssdb@npm:^8.2.1":
-  version: 8.2.1
-  resolution: "cssdb@npm:8.2.1"
-  checksum: 10c0/d27d7db0a39e1105181aac119a98d6c92cd5ceba2e8bd349cdf2ba4a8d9ead149b685a1dba9542ca24f094cc70eca4a3e02973fe1f74c11a373b508606e5e1c0
+"cssdb@npm:^8.2.3":
+  version: 8.2.3
+  resolution: "cssdb@npm:8.2.3"
+  checksum: 10c0/17c3ca6432ed02431db6b44bed74649ccef7d7b7b900ccbc7297525f030722c441dd67c71f28aef3cfa0814ba7b254a24adfb0dcd5728937da179ff437cdcd0c
   languageName: node
   linkType: hard
 
@@ -13061,6 +13061,89 @@ __metadata:
   languageName: node
   linkType: hard
 
+"esbuild@npm:0.24.0":
+  version: 0.24.0
+  resolution: "esbuild@npm:0.24.0"
+  dependencies:
+    "@esbuild/aix-ppc64": "npm:0.24.0"
+    "@esbuild/android-arm": "npm:0.24.0"
+    "@esbuild/android-arm64": "npm:0.24.0"
+    "@esbuild/android-x64": "npm:0.24.0"
+    "@esbuild/darwin-arm64": "npm:0.24.0"
+    "@esbuild/darwin-x64": "npm:0.24.0"
+    "@esbuild/freebsd-arm64": "npm:0.24.0"
+    "@esbuild/freebsd-x64": "npm:0.24.0"
+    "@esbuild/linux-arm": "npm:0.24.0"
+    "@esbuild/linux-arm64": "npm:0.24.0"
+    "@esbuild/linux-ia32": "npm:0.24.0"
+    "@esbuild/linux-loong64": "npm:0.24.0"
+    "@esbuild/linux-mips64el": "npm:0.24.0"
+    "@esbuild/linux-ppc64": "npm:0.24.0"
+    "@esbuild/linux-riscv64": "npm:0.24.0"
+    "@esbuild/linux-s390x": "npm:0.24.0"
+    "@esbuild/linux-x64": "npm:0.24.0"
+    "@esbuild/netbsd-x64": "npm:0.24.0"
+    "@esbuild/openbsd-arm64": "npm:0.24.0"
+    "@esbuild/openbsd-x64": "npm:0.24.0"
+    "@esbuild/sunos-x64": "npm:0.24.0"
+    "@esbuild/win32-arm64": "npm:0.24.0"
+    "@esbuild/win32-ia32": "npm:0.24.0"
+    "@esbuild/win32-x64": "npm:0.24.0"
+  dependenciesMeta:
+    "@esbuild/aix-ppc64":
+      optional: true
+    "@esbuild/android-arm":
+      optional: true
+    "@esbuild/android-arm64":
+      optional: true
+    "@esbuild/android-x64":
+      optional: true
+    "@esbuild/darwin-arm64":
+      optional: true
+    "@esbuild/darwin-x64":
+      optional: true
+    "@esbuild/freebsd-arm64":
+      optional: true
+    "@esbuild/freebsd-x64":
+      optional: true
+    "@esbuild/linux-arm":
+      optional: true
+    "@esbuild/linux-arm64":
+      optional: true
+    "@esbuild/linux-ia32":
+      optional: true
+    "@esbuild/linux-loong64":
+      optional: true
+    "@esbuild/linux-mips64el":
+      optional: true
+    "@esbuild/linux-ppc64":
+      optional: true
+    "@esbuild/linux-riscv64":
+      optional: true
+    "@esbuild/linux-s390x":
+      optional: true
+    "@esbuild/linux-x64":
+      optional: true
+    "@esbuild/netbsd-x64":
+      optional: true
+    "@esbuild/openbsd-arm64":
+      optional: true
+    "@esbuild/openbsd-x64":
+      optional: true
+    "@esbuild/sunos-x64":
+      optional: true
+    "@esbuild/win32-arm64":
+      optional: true
+    "@esbuild/win32-ia32":
+      optional: true
+    "@esbuild/win32-x64":
+      optional: true
+  bin:
+    esbuild: bin/esbuild
+  checksum: 10c0/9f1aadd8d64f3bff422ae78387e66e51a5e09de6935a6f987b6e4e189ed00fdc2d1bc03d2e33633b094008529c8b6e06c7ad1a9782fb09fec223bf95998c0683
+  languageName: node
+  linkType: hard
+
 "esbuild@npm:0.24.2":
   version: 0.24.2
   resolution: "esbuild@npm:0.24.2"
@@ -13224,89 +13307,6 @@ __metadata:
   bin:
     esbuild: bin/esbuild
   checksum: 10c0/fa08508adf683c3f399e8a014a6382a6b65542213431e26206c0720e536b31c09b50798747c2a105a4bbba1d9767b8d3615a74c2f7bf1ddf6d836cd11eb672de
-  languageName: node
-  linkType: hard
-
-"esbuild@npm:^0.24.0":
-  version: 0.24.0
-  resolution: "esbuild@npm:0.24.0"
-  dependencies:
-    "@esbuild/aix-ppc64": "npm:0.24.0"
-    "@esbuild/android-arm": "npm:0.24.0"
-    "@esbuild/android-arm64": "npm:0.24.0"
-    "@esbuild/android-x64": "npm:0.24.0"
-    "@esbuild/darwin-arm64": "npm:0.24.0"
-    "@esbuild/darwin-x64": "npm:0.24.0"
-    "@esbuild/freebsd-arm64": "npm:0.24.0"
-    "@esbuild/freebsd-x64": "npm:0.24.0"
-    "@esbuild/linux-arm": "npm:0.24.0"
-    "@esbuild/linux-arm64": "npm:0.24.0"
-    "@esbuild/linux-ia32": "npm:0.24.0"
-    "@esbuild/linux-loong64": "npm:0.24.0"
-    "@esbuild/linux-mips64el": "npm:0.24.0"
-    "@esbuild/linux-ppc64": "npm:0.24.0"
-    "@esbuild/linux-riscv64": "npm:0.24.0"
-    "@esbuild/linux-s390x": "npm:0.24.0"
-    "@esbuild/linux-x64": "npm:0.24.0"
-    "@esbuild/netbsd-x64": "npm:0.24.0"
-    "@esbuild/openbsd-arm64": "npm:0.24.0"
-    "@esbuild/openbsd-x64": "npm:0.24.0"
-    "@esbuild/sunos-x64": "npm:0.24.0"
-    "@esbuild/win32-arm64": "npm:0.24.0"
-    "@esbuild/win32-ia32": "npm:0.24.0"
-    "@esbuild/win32-x64": "npm:0.24.0"
-  dependenciesMeta:
-    "@esbuild/aix-ppc64":
-      optional: true
-    "@esbuild/android-arm":
-      optional: true
-    "@esbuild/android-arm64":
-      optional: true
-    "@esbuild/android-x64":
-      optional: true
-    "@esbuild/darwin-arm64":
-      optional: true
-    "@esbuild/darwin-x64":
-      optional: true
-    "@esbuild/freebsd-arm64":
-      optional: true
-    "@esbuild/freebsd-x64":
-      optional: true
-    "@esbuild/linux-arm":
-      optional: true
-    "@esbuild/linux-arm64":
-      optional: true
-    "@esbuild/linux-ia32":
-      optional: true
-    "@esbuild/linux-loong64":
-      optional: true
-    "@esbuild/linux-mips64el":
-      optional: true
-    "@esbuild/linux-ppc64":
-      optional: true
-    "@esbuild/linux-riscv64":
-      optional: true
-    "@esbuild/linux-s390x":
-      optional: true
-    "@esbuild/linux-x64":
-      optional: true
-    "@esbuild/netbsd-x64":
-      optional: true
-    "@esbuild/openbsd-arm64":
-      optional: true
-    "@esbuild/openbsd-x64":
-      optional: true
-    "@esbuild/sunos-x64":
-      optional: true
-    "@esbuild/win32-arm64":
-      optional: true
-    "@esbuild/win32-ia32":
-      optional: true
-    "@esbuild/win32-x64":
-      optional: true
-  bin:
-    esbuild: bin/esbuild
-  checksum: 10c0/9f1aadd8d64f3bff422ae78387e66e51a5e09de6935a6f987b6e4e189ed00fdc2d1bc03d2e33633b094008529c8b6e06c7ad1a9782fb09fec223bf95998c0683
   languageName: node
   linkType: hard
 
@@ -15625,7 +15625,7 @@ __metadata:
   dependencies:
     "@aws-sdk/client-dynamodb": "npm:3.716.0"
     "@biomejs/biome": "npm:1.9.4"
-    "@hckr_/blendid": "npm:9.0.1"
+    "@hckr_/blendid": "npm:9.1.0"
     "@types/firefox-webext-browser": "npm:120.0.4"
     "@types/node": "npm:22.10.2"
     "@types/nunjucks": "npm:3.2.6"
@@ -18004,12 +18004,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"marked@npm:15.0.3":
-  version: 15.0.3
-  resolution: "marked@npm:15.0.3"
+"marked@npm:15.0.4":
+  version: 15.0.4
+  resolution: "marked@npm:15.0.4"
   bin:
     marked: bin/marked.js
-  checksum: 10c0/2e08d50b2ad96509a8ca93a5b57e9c7bf64ea44c8f504392191955dac5b117996ee39ceaafe0330e87a3bd93f7af5942bb87ef9bf55664a8d660012e7a43c3cc
+  checksum: 10c0/e2bfd9178e5242cc814aaf8020f3c2e954c047652c498dac0732f4b711d5e3ab80dbc54b964799d80470d6c515a24905e554c4a40f87b05dedc26e4e36cfdfdb
   languageName: node
   linkType: hard
 
@@ -20602,9 +20602,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-preset-env@npm:10.1.1":
-  version: 10.1.1
-  resolution: "postcss-preset-env@npm:10.1.1"
+"postcss-preset-env@npm:10.1.2":
+  version: 10.1.2
+  resolution: "postcss-preset-env@npm:10.1.2"
   dependencies:
     "@csstools/postcss-cascade-layers": "npm:^5.0.1"
     "@csstools/postcss-color-function": "npm:^4.0.6"
@@ -20641,9 +20641,9 @@ __metadata:
     autoprefixer: "npm:^10.4.19"
     browserslist: "npm:^4.23.1"
     css-blank-pseudo: "npm:^7.0.1"
-    css-has-pseudo: "npm:^7.0.1"
+    css-has-pseudo: "npm:^7.0.2"
     css-prefers-color-scheme: "npm:^10.0.0"
-    cssdb: "npm:^8.2.1"
+    cssdb: "npm:^8.2.3"
     postcss-attribute-case-insensitive: "npm:^7.0.1"
     postcss-clamp: "npm:^4.1.0"
     postcss-color-functional-notation: "npm:^7.0.6"
@@ -20671,7 +20671,7 @@ __metadata:
     postcss-selector-not: "npm:^8.0.1"
   peerDependencies:
     postcss: ^8.4
-  checksum: 10c0/99931117735a66827c7318be023ddb614990457617ccbe7fd2fdc1f10345554652df180d4842768d68d57e14fc0be4d86d0b413c65e77e02db5511e57ed07c4f
+  checksum: 10c0/bd40330867a525679d434ff9602efbf229da9e745a3759c2d0b3cff166dd0f17bf99b44673ebb316df1906c2bf2edef97aeef1840aa6be170b43a34404df396d
   languageName: node
   linkType: hard
 
@@ -24624,11 +24624,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite@npm:6.0.3":
-  version: 6.0.3
-  resolution: "vite@npm:6.0.3"
+"vite@npm:6.0.5":
+  version: 6.0.5
+  resolution: "vite@npm:6.0.5"
   dependencies:
-    esbuild: "npm:^0.24.0"
+    esbuild: "npm:0.24.0"
     fsevents: "npm:~2.3.3"
     postcss: "npm:^8.4.49"
     rollup: "npm:^4.23.0"
@@ -24672,7 +24672,7 @@ __metadata:
       optional: true
   bin:
     vite: bin/vite.js
-  checksum: 10c0/764ebed14770426a638575b23a51127c630ace873999ab896b0184484d8107e7255cdf64cfb36c65c1ef1d583e44b70a1d14c0f05b89612e834a5806e3964475
+  checksum: 10c0/d6927e1795abf0bffbf9183c3c3338c7cc1060bcfbfcd951aa4464c1e5478216f26c95077a2bbd29edbaebc079c1f08a37c7daac8f07c0a6bb53e79d502c70ef
   languageName: node
   linkType: hard
 
