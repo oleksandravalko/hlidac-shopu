@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import projectPath from "@hckr_/blendid/lib/projectPath.mjs";
+import { texyTypography } from "@hckr_/blendid/lib/texy.mjs";
 import gulp_mode from "gulp-mode";
 import cssvariables from "postcss-css-variables";
 import pathConfig from "./path-config.mjs";
@@ -78,6 +79,7 @@ const config = {
 
   html: {
     collections: ["media", "images", "assets", "build", "dashboard", "shops", "shopNumbers", "stats", "reviews"],
+    markedExtensions: [texyTypography("cs")],
     nunjucksRender: {
       globals: {
         currentYear: new Date().getFullYear()

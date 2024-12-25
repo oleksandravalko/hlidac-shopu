@@ -25,10 +25,10 @@
       </a>
     </div>
     <div class="media__body">
-      <h3><a href="{{ article.url }}"><texy-typo>{{ article.title }}</texy-typo></a></h3>
+      <h3><a href="{{ article.url }}">{{ article.title | processTypography("cs") }}</a></h3>
       <time datetime="{{ article.published }}" class="media__date">{{ article.published | longDate }}</time>
       <div class="media__description">
-       <texy-typo>{{ article.body | safe }}</texy-typo>
+       {{ article.body | processTypography("cs") | safe }}
       </div>
     </div>
   </article>
@@ -68,7 +68,5 @@
   </section>
 {% endblock %}
 
-
 {% block scripts %}
-<script type="module" src="{{ "texy.js" | assetUrl("esm") }}"></script>
 {% endblock %}
