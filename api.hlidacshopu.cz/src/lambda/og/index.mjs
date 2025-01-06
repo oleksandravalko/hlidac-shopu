@@ -23,13 +23,13 @@ export async function handleRequest(event) {
 
   const url = new URLSearchParams({ url: qs.url });
   const params = new URLSearchParams({
-    "token": process.env.TOKEN ?? "",
-    "url": `https://www.hlidacshopu.cz/widget/?${url}`,
-    "waitUntil": "networkidle0",
-    "fullPage": "1",
-    "w": "600",
-    "h": "315",
-    "dpr": "2"
+    token: process.env.TOKEN ?? "",
+    url: `https://www.hlidacshopu.cz/widget/?${url}`,
+    waitUntil: "networkidle0",
+    fullPage: 1,
+    w: 600,
+    h: 315,
+    dpr: 2
   });
 
   const resp = await fetch(`${process.env.HOST}?${params}`, {
