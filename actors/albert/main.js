@@ -60,12 +60,14 @@ function apiQuery(persistedQueryHash, params) {
   return `https://www.albert.cz/api/v1/?${new URLSearchParams(params)}`;
 }
 
-// This is map of persisted queriy hashes for given operation.
+// This is map of persisted query hashes for given operation.
 // When something breaks, it is likely you just have to update the hash here.
-// TODO: try to read those from page and store theme for use in the run
+// LeftHandNavigationBar try to search here https://www.albert.cz/online?intcmp=web_all_megamenu_albert-online_still_hp_cz
+// GetCategoryProductSearch try to search here https://www.albert.cz/shop/Trvale-nizke/c/zeB001
+// TODO: try to read those from page and store them for use in the run
 const opHash = new Map([
   ["LeftHandNavigationBar", "29a05b50daa7ab7686d28bf2340457e2a31e1a9e4d79db611fcee435536ee01c"],
-  ["GetCategoryProductSearch", "dd8d3de806d7e82af7e29b491a30df5a93d2c27c04190ef25ab973cbfe913079"]
+  ["GetCategoryProductSearch", "52764906c44e42aec923b3896810a61c85d344084ba2080b5c655b3453d4560e"]
 ]);
 
 function gql(operationName, variables) {
