@@ -5,7 +5,7 @@
   "type": "module",
   "dependencies": {
     "@aws-sdk/client-dynamodb": "3.726.1",
-    "@aws-sdk/client-s3": "3.726.1",
+    "@aws-sdk/client-s3": "3.729.0",
     "@aws-sdk/client-sqs": "3.726.1",
     "@aws-sdk/util-dynamodb": "3.726.1",
     "@hlidac-shopu/lib": "workspace:*",
@@ -20,6 +20,6 @@
     "chai": "5.1.2"
   },
   "scripts": {
-    "test": "c8 ava *.test.mjs"
+    "test": "c8 ava **/*.test.mjs"
   }
 }

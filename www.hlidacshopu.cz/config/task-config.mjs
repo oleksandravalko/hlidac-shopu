@@ -78,12 +78,11 @@ const config = {
   },
 
   html: {
-    collections: ["media", "images", "assets", "build", "dashboard", "shops", "shopNumbers", "stats", "reviews"],
+    data: {
+      collections: ["media", "images", "assets", "build", "dashboard", "shops", "shopNumbers", "stats", "reviews"]
+    },
     markedExtensions: [texyTypography("cs")],
     nunjucksRender: {
-      globals: {
-        currentYear: new Date().getFullYear()
-      },
       filters: {
         longDate(str) {
           return longDateFormatter.format(new Date(str));

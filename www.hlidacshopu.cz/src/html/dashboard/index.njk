@@ -215,6 +215,6 @@
 
     const tableRoot = document.getElementById("table-root");
     const shopCards = document.getElementById("shop-cards");
-    main({ tableRoot, shopCards, extraData: {{ dashboard | dump | safe }} });
+    main({ tableRoot, shopCards, extraData: {{ collections.dashboard | dump | safe }} });
   </script>
 {% endblock %}

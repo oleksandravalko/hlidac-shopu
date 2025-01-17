@@ -16,17 +16,18 @@ function countProducts(items) {
 }
 
 export default {
+  meta: {
+    lang: "cs",
+    url: "https://www.hlidacshopu.cz/",
+    title: "Hlídač shopů",
+    description: "Ujistěte se, že nakupujete opravdu se slevou",
+    generator: "@hckr_/blendid - static site generator and assets pipeline"
+  },
   blackFriday: {
     currentYear: 2024
   },
-  "en": {
-    "code": "en",
-    "navigation": {
-      "other-page": "Other Page"
-    },
-    "topmonks-index": {
-      "title": "TopMonks"
-    }
+  get currentYear() {
+    return new Date().getFullYear();
   },
   filter: {
     shopsToShowOnHP(arr) {

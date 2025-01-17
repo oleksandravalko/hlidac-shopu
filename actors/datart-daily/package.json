@@ -12,8 +12,8 @@
     "got-scraping": "4.0.8"
   },
   "devDependencies": {
-    "@types/node": "22.10.2",
-    "apify-cli": "0.20.13"
+    "@types/node": "22.10.7",
+    "apify-cli": "0.21.0"
   },
   "scripts": {
     "start": "node main.js",

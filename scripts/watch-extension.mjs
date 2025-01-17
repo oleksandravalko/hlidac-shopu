@@ -52,6 +52,6 @@ function dispose() {
 build();
 
 console.log("Watching extension files");
-const watcher = chokidar.watch(["lib/**/*.js", "extension/**/*.mjs"]);
+const watcher = chokidar.watch(["./lib", "./extension"]);
 watcher.on("change", () => rebuild());
 process.addListener("beforeExit", () => dispose());

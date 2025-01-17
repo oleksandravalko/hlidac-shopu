@@ -1,26 +1,31 @@
-{% from 'macros/helpers.njk' import spriteTarget %}
+{%- from 'macros/helpers.njk' import spriteTarget -%}
 <!DOCTYPE html>
 <html lang="cs">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta http-equiv="Accept-CH" content="DPR,Viewport-Width,Width,Save-Data,UA">
+  <meta http-equiv="delegate-ch" content="sec-ch-width https://res.cloudinary.com; sec-ch-dpr https://res.cloudinary.com; sec-ch-viewport-width https://res.cloudinary.com;">
   <meta
     name="viewport"
     content="width=device-width,initial-scale=1,minimum-scale=1">
   <title>Hlídačshopů.cz</title>
-  <meta name="description"
-        content="Ověřte si, jestli v nejoblíbenějších českých e-shopech nakupujete opravdu se slevou.">
-  <link rel="manifest" href="/sitemanifest.json">
-  <link rel="preload" as="style" href="{{ "app.css" | assetUrl("stylesheets") }}">
   <link rel="preconnect" href="https://api.hlidacshopu.cz" crossorigin>
-  <meta name="theme-color" content="#545fef">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="application-name" content="Hlídač shopů">
-  <meta name="apple-mobile-web-app-title" content="Hlídač shopů">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        "gtm.start": new Date().getTime(),
+        event: "gtm.js"
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != "dataLayer" ? "&l=" + l : "";
+      j.async = true;
+      j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, "script", "dataLayer", "GTM-58WNT3B");
+  </script>
+  <!-- End Google Tag Manager -->
   <style>
     /* Subset: Latin1 */
     @font-face {
@@ -515,31 +520,25 @@
       }
     }
   </style>
+  <link rel="preload" as="style" href="{{ "app.css" | assetUrl("stylesheets") }}">
   <link rel="modulepreload" href="/assets/esm/app.js">
-  {% set imports = assets.outputs["app.js"].imports %}
+  {% set imports = collections.assets.outputs["app.js"].imports %}
   {% for import in imports %}
     <link rel="preload" as="script" href="/assets/esm/{{ import.path }}" crossorigin>
   {% endfor %}
-  <!-- Google Tag Manager -->
-  <script>
-    (function(w, d, s, l, i) {
-      w[l] = w[l] || [];
-      w[l].push({
-        "gtm.start": new Date().getTime(),
-        event: "gtm.js"
-      });
-      var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s),
-        dl = l != "dataLayer" ? "&l=" + l : "";
-      j.async = true;
-      j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-      f.parentNode.insertBefore(j, f);
-    })(window, document, "script", "dataLayer", "GTM-58WNT3B");
-  </script>
-  <!-- End Google Tag Manager -->
+  <meta name="description" content="{{ meta.description }}">
+  <link rel="manifest" href="/sitemanifest.json">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#545fef">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="{{ meta.url }}">
+  <meta name="apple-mobile-web-app-title" content="{{ meta.url }}">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <meta name="rollbar:access-token" content="907e1d1fd2f94767af0a6bd5afda40ed">
-  <meta name="hs:environment" content="{{ build.environment }}">
-  <meta name="hs:version" content="{{ build.version }}">
+  <meta name="hs:environment" content="{{ collections.build.environment }}">
+  <meta name="hs:version" content="{{ collections.build.version }}">
 </head>
 <body vocab="https://schema.org" typeof="WebApplication">
 <!-- Google Tag Manager (noscript) -->

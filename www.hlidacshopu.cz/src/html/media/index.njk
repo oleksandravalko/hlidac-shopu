@@ -7,7 +7,7 @@
 {% endblock %}
 
 {% macro mediaImage(path) %}
-  {% set publicId = images["media/" + path]["public_id"] %}
+  {% set publicId = collections.images["media/" + path]["public_id"] %}
   {% if publicId %}
   <img alt="" width="250" height="142" role="presentation"
        src="{{ publicId | cloudinaryUrl(width=250,height=142,dpr="auto") }}"
@@ -45,18 +45,18 @@
           <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
             <ul class="hs-year-selector" role="tablist" aria-label="Výběr ročníku">
               {% for year in range(currentYear, 2016, -1) %}
-                {% if media[year].length %}
+                {% if collections.media[year].length %}
                   <li><a href="#rok-{{ year }}" role="tab" aria-controls="rok-{{ year }}">{{ year }}</a></li>
                 {% endif %}
               {% endfor %}</ul>
           </div>
         </div>
         {% for year in range(currentYear, 2016, -1) %}
-          {% if media[year].length %}
+          {% if collections.media[year].length %}
             <div id="rok-{{ year }}" class="media-item">
               <h2 class="media-heading">{{ year }}</h2>
               <div class="media-article-list">
-                {% for article in media[year] | sort(true, false, "published") %}
+                {% for article in collections.media[year] | sort(reverse=true, caseSens=false, attr="published") %}
                   {{ mediaArticle(article) }}
                 {% endfor %}
               </div>
@@ -66,7 +66,4 @@
       </div>
     </div>
   </section>
-{% endblock %}
-
-{% block scripts %}
 {% endblock %}

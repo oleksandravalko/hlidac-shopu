@@ -11,13 +11,12 @@ export class Pilulka extends AsyncShop {
   }
 
   async scrape() {
-    const product = JSON.parse(document.querySelector("script[type='application/ld+json']").textContent);
-    const title = product?.name;
+    // do not parse JSON+ld that it has not changed during transitions
+    const title = document.querySelector(".service-detail__title ").title;
     const itemId = document.querySelector("[componentname='catalog.product']").id;
-    const currentPrice = product?.offers?.price;
+    const currentPrice = cleanPrice(`.product-card-price__prices`);
     const originalPrice = cleanPrice(`.price-before, .superPrice__old__price`);
-    const imageUrl = product?.image?.[0];
-
+    const imageUrl = document.querySelector(".service-detail__main-link").href;
     return { itemId, title, currentPrice, originalPrice, imageUrl };
   }
 }

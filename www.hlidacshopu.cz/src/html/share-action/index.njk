@@ -1,24 +1,33 @@
-{% from 'macros/helpers.njk' import spriteTarget %}
+{%- from 'macros/helpers.njk' import spriteTarget -%}
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta http-equiv="Accept-CH" content="DPR,Viewport-Width,Width,Save-Data,UA" />
+  <meta charset="UTF-8">
+  <meta http-equiv="delegate-ch"
+        content="sec-ch-width https://res.cloudinary.com; sec-ch-dpr https://res.cloudinary.com; sec-ch-viewport-width https://res.cloudinary.com;">
   <meta
     name="viewport"
-    content="width=device-width,initial-scale=1,minimum-scale=1"
-  />
+    content="width=device-width,initial-scale=1,minimum-scale=1">
   <title>Hlídačshopů.cz</title>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://api.hlidacshopu.cz" crossorigin>
-  <meta name="theme-color" content="#ffffff" />
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="application-name" content="Hlídač shopů" />
-  <meta name="apple-mobile-web-app-title" content="Hlídač shopů" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        "gtm.start": new Date().getTime(),
+        event: "gtm.js"
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != "dataLayer" ? "&l=" + l : "";
+      j.async = true;
+      j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, "script", "dataLayer", "GTM-58WNT3B");
+  </script>
+  <!-- End Google Tag Manager -->
   <style>
     :root {
       --mdc-theme-primary: #fff;
@@ -173,6 +182,7 @@
       align-items: center;
       justify-content: center;
     }
+
     .spinner {
       position: relative;
       width: 32px;
@@ -189,92 +199,96 @@
       top: 43%;
       opacity: 0;
       -webkit-border-radius: 50px;
-      -webkit-box-shadow: 0 0 3px rgba(0,0,0,0.2);
+      -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
       -webkit-animation: fade 1s linear infinite;
     }
 
     @-webkit-keyframes fade {
-      from {opacity: 1;}
-      to {opacity: 0.25;}
+      from {
+        opacity: 1;
+      }
+      to {
+        opacity: 0.25;
+      }
     }
 
     .spinner .bar1 {
-      -webkit-transform:rotate(0deg) translate(0, -130%);
+      -webkit-transform: rotate(0deg) translate(0, -130%);
       -webkit-animation-delay: 0s;
     }
 
     .spinner .bar2 {
-      -webkit-transform:rotate(30deg) translate(0, -130%);
+      -webkit-transform: rotate(30deg) translate(0, -130%);
       -webkit-animation-delay: -0.9167s;
     }
 
     .spinner .bar3 {
-      -webkit-transform:rotate(60deg) translate(0, -130%);
+      -webkit-transform: rotate(60deg) translate(0, -130%);
       -webkit-animation-delay: -0.833s;
     }
+
     .spinner .bar4 {
-      -webkit-transform:rotate(90deg) translate(0, -130%);
+      -webkit-transform: rotate(90deg) translate(0, -130%);
       -webkit-animation-delay: -0.7497s;
     }
+
     .spinner .bar5 {
-      -webkit-transform:rotate(120deg) translate(0, -130%);
+      -webkit-transform: rotate(120deg) translate(0, -130%);
       -webkit-animation-delay: -0.667s;
     }
+
     .spinner .bar6 {
-      -webkit-transform:rotate(150deg) translate(0, -130%);
+      -webkit-transform: rotate(150deg) translate(0, -130%);
       -webkit-animation-delay: -0.5837s;
     }
+
     .spinner .bar7 {
-      -webkit-transform:rotate(180deg) translate(0, -130%);
+      -webkit-transform: rotate(180deg) translate(0, -130%);
       -webkit-animation-delay: -0.5s;
     }
+
     .spinner .bar8 {
-      -webkit-transform:rotate(210deg) translate(0, -130%);
+      -webkit-transform: rotate(210deg) translate(0, -130%);
       -webkit-animation-delay: -0.4167s;
     }
+
     .spinner .bar9 {
-      -webkit-transform:rotate(240deg) translate(0, -130%);
+      -webkit-transform: rotate(240deg) translate(0, -130%);
       -webkit-animation-delay: -0.333s;
     }
+
     .spinner .bar10 {
-      -webkit-transform:rotate(270deg) translate(0, -130%);
+      -webkit-transform: rotate(270deg) translate(0, -130%);
       -webkit-animation-delay: -0.2497s;
     }
+
     .spinner .bar11 {
-      -webkit-transform:rotate(300deg) translate(0, -130%);
+      -webkit-transform: rotate(300deg) translate(0, -130%);
       -webkit-animation-delay: -0.167s;
     }
+
     .spinner .bar12 {
-      -webkit-transform:rotate(330deg) translate(0, -130%);
+      -webkit-transform: rotate(330deg) translate(0, -130%);
       -webkit-animation-delay: -0.0833s;
     }
 
   </style>
   <link rel="modulepreload" href="{{ "share-action.js" | assetUrl("esm") }}">
-  {% set imports = assets.outputs["share-action.js"].imports %}
+  {% set imports = collections.assets.outputs["share-action.js"].imports %}
   {% for import in imports %}
-    <link rel="preload" as="script" href="{{ import.path | assetUrl("esm")  }}" crossorigin>
+    <link rel="preload" as="script" href="{{ import.path | assetUrl("esm") }}" crossorigin>
   {% endfor %}
-  <!-- Google Tag Manager -->
-  <script>
-    (function(w, d, s, l, i) {
-      w[l] = w[l] || [];
-      w[l].push({
-        "gtm.start": new Date().getTime(),
-        event: "gtm.js"
-      });
-      var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s),
-        dl = l != "dataLayer" ? "&l=" + l : "";
-      j.async = true;
-      j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-      f.parentNode.insertBefore(j, f);
-    })(window, document, "script", "dataLayer", "GTM-58WNT3B");
-  </script>
-  <!-- End Google Tag Manager -->
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="{{ meta.url }}">
+  <meta name="apple-mobile-web-app-title" content="{{ meta.url }}">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <meta name="rollbar:access-token" content="907e1d1fd2f94767af0a6bd5afda40ed">
-  <meta name="hs:environment" content="{{ build.environment }}">
-  <meta name="hs:version" content="{{ build.version }}">
+  <meta name="hs:environment" content="{{ collections.build.environment }}">
+  <meta name="hs:version" content="{{ collections.build.version }}">
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
