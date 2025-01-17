@@ -1,6 +1,6 @@
 {%- from 'macros/helpers.njk' import sprite -%}
 <!DOCTYPE html>
-<html lang="cs">
+<html lang="{{ meta.lang }}">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -139,28 +139,30 @@
   <link rel="preload" as="font" crossorigin="anonymous" href="/assets/css/IBMPlexSansVar-Roman-Latin1.woff2">
   <link rel="preload" as="font" crossorigin="anonymous" href="/assets/css/IBMPlexSansVar-Roman-Latin2.woff2">
   {% block preload %}{% endblock %}
-  <meta name="description" content="Ujistěte se, že nakupujete opravdu se slevou">
-  <meta name="generator" content="{{ generator or '@hckr_/blendid - static site generator and assets pipeline' }}">
+  <meta name="description" content="{{ meta.description }}">
+  <meta name="generator" content="{{ generator or meta.generator }}">
   <meta name="author" content="https://hckr.studio/">
-  <meta name="twitter:description" property="og:description" content="Ujistěte se, že nakupujete opravdu se slevou">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="twitter:description" property="og:description" content="{{ meta.description }}">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@hlidacshopucz">
-  <meta name="twitter:title" content="Hlídač shopů">
+  <meta name="twitter:title" content="{{ meta.title }}">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.hlidacshopu.cz/">
+  <meta property="og:url" content="{{ meta.url }}">
   <meta name="twitter:image" property="og:image" content="https://www.hlidacshopu.cz/og-image.png">
+  <link rel="canonical" href="{{ meta.url }}">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/sitemanifest.json">
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#545fef">
-  <meta name="apple-mobile-web-app-title" content="Hlídač shopů">
+  <meta name="apple-mobile-web-app-title" content="{{ meta.title }}">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <meta name="application-name" content="Hlídač shopů">
+  <meta name="application-name" content="{{ meta.title }}">
   <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="theme-color" content="#ffffff">
   <meta name="rollbar:access-token" content="907e1d1fd2f94767af0a6bd5afda40ed">
-  <meta name="hs:environment" content="{{ build.environment }}">
-  <meta name="hs:version" content="{{ build.version }}">
+  <meta name="hs:environment" content="{{ collections.build.environment }}">
+  <meta name="hs:version" content="{{ collections.build.version }}">
   {% block meta %}{% endblock %}
 </head>
 <body class="{{ bodyClass }}" vocab="https://schema.org" typeof="{{ type if type else 'WebPage' }}">

@@ -167,6 +167,6 @@
 
     const tableRoot = document.getElementById("table-root");
     const year = new URL(location.href).searchParams.get("rok") ?? {{ lastBFYear }};
-    main({ year, tableRoot, extraData: {{ dashboard | dump | safe }} });
+    main({ year, tableRoot, extraData: {{ collections.dashboard | dump | safe }} });
   </script>
 {% endblock %}
