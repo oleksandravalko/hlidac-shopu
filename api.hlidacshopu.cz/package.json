@@ -20,6 +20,6 @@
     "chai": "5.1.2"
   },
   "scripts": {
-    "test": "c8 ava *.test.mjs"
+    "test": "c8 ava **/*.test.mjs"
   }
 }
